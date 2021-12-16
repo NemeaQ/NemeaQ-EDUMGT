@@ -1,0 +1,59 @@
+/* Button */
+
+.btn {
+    display: inline-block;
+    font-family: Circular, sans-serif;
+    line-height: 1.5;
+    color: #212529;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 12px;
+    border-radius: 1.5rem;
+    transition: .15s ease-in-out;
+}
+
+.btn__group>.btn {
+    margin: 0.2rem;
+}
+
+.btn__icon {
+    height: 1rem;
+    margin-bottom: -4px;
+}
+
+/* Colored buttons*/
+
+.btn-white {
+    color: #555555;
+    fill: #555555;
+    background-color: #ffffff;
+}
+
+.btn-white:hover {
+    color: #fff;
+    fill: #fff;
+    background-color: transparent;
+    border-color: #7d3c99;
+}
+
+
+.btn-green {
+    color: #fff;
+    fill: #fff;
+    background-color: var(--accent);
+}
+
+.btn-green:hover {
+    color: #fff;
+    fill: #fff;
+    background-color: transparent;
+    border-color: #7d3c99;
+}
+

@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteBase "/"
+#RewriteRule ^([^.]+)$ index.php?m=$1 [L,PT,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L,QSA]

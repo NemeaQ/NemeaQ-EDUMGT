@@ -1,0 +1,21 @@
+.online-bar__label {
+    margin: 16px 0;
+}
+
+progress {
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-bar {
+    background: rgba(0,0,0,0.7);
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+    background: #fe38ac;
+    border-radius: 8px;
+}
+
+progress::-moz-progress-bar {
+    /* стили */
+}

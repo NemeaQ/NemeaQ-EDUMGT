@@ -1,0 +1,17 @@
+{
+  "name": "hanriel/edumgt",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "dfnil",
+      "email": "dfnil@live.ru"
+    }
+  ],
+  "require": {
+    "workerman/workerman": "v4.0.25",
+    "ext-curl": "*",
+    "ext-mysqli": "*"
+  }
+}

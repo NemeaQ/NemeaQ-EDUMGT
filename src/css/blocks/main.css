@@ -1,0 +1,13 @@
+.main {
+    margin-left: 230px;
+    min-height: 100vh;
+    /*padding: 0 30px;*/
+}
+
+.main nav {
+    padding: 0 30px;
+}
+
+.main section {
+    padding: 30px;
+}

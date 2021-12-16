@@ -1,0 +1,65 @@
+/* Global */
+
+@import "milligram.min.css";
+@import "blocks/logo.css";
+
+.page__body {
+    margin: 0;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.header {
+    display: grid;
+    width: 100%;
+    padding: 5px 12px;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    background-color: #f4f5f6;
+}
+
+@media (max-width: 800px) {
+    .header__logo {
+        z-index: 1;
+    }
+}
+
+@media (min-width: 800px) {
+    .header__logo {
+        align-self: start;
+    }
+}
+
+.status-online {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: greenyellow;
+    margin-right: 4px;
+    margin-bottom: -2px;
+}
+
+.status-offline {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+    margin-bottom: -2px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.server-stat {
+    border: 1px solid lightgray;
+    padding: 16px;
+}

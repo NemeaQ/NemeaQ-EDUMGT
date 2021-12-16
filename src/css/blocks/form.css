@@ -1,0 +1,36 @@
+.form__box {
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #222222;
+    align-items: center;
+}
+
+.form__title {
+    margin-top: 0;
+    text-align: center;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1.5rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form__control:disabled, .form__control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+

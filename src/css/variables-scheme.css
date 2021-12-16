@@ -1,0 +1,16 @@
+:root, html, body {
+	--light: #FAFAFA;
+	--dark: #0b031b;
+	--dark-light: #1e113b;
+	--dark-vibrant: #250b5a;
+	--accent: #fe38ac;
+	--accent-secondary: #1caacc;
+	--bg-light: #f1f4f6;
+	--bg-gray: #222;
+	--glass-dark: rgba(24,24,27,.5);
+	--glass-black: rgba(0,0,0,.5);
+	--text-accent: #250b5a;
+
+	--border-radius-s: 9px;
+	--border-radius-m: 14px;
+}

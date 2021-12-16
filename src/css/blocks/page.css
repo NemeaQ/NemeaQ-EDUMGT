@@ -1,0 +1,19 @@
+/* Page */
+
+.page {
+    font-family: Circular, sans-serif;
+    background-color: #222;
+    color: var(--light);
+}
+
+.page__body {
+    margin: 0;
+    background-color: var(--bg-light);
+}
+
+.flex-vertical {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+}

@@ -1,0 +1,55 @@
+/* Logo */
+
+.logo {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 8px;
+    line-height: 1.4;
+}
+
+.logo__image {
+    width: 44px;
+    height: 44px;
+}
+
+@media (min-width: 800px) {
+    .logo__image {
+        grid-row: span 2;
+    }
+}
+
+/* Title */
+
+.logo__title {
+    margin: 0;
+    letter-spacing: -0.03em;
+    font-family: CircularBold, sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width:  800px) {
+    .logo__title {
+        align-self: center;
+    }
+}
+
+@media (min-width: 800px) {
+    .logo__title {
+        align-self: end;
+    }
+}
+
+/* Tagline */
+
+.logo__tagline {
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .logo__tagline {
+        display: none;
+    }
+}

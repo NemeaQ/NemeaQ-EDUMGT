@@ -1,0 +1,17 @@
+/* Footer */
+
+.footer {
+    display: grid;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .footer {
+    }
+}
+
+.footer__line {
+    font-size: .75rem;
+    line-height: 1rem;
+    margin: 0;
+}
