@@ -1,0 +1,3 @@
+[submodule "app/engine"]
+	path = app/engine
+	url = https://github.com/NemeaQ/NemeaQ-CMS.git
