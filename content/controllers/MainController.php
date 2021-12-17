@@ -1,13 +1,13 @@
 <?php
 
-namespace app\controllers;
+namespace content\controllers;
 
-use app\core\Controller;
-use app\core\Model;
+use engine\core\Controller;
+use engine\core\Model;
 
 /**
  * Class MainController
- * @package app\controllers
+ * @package content\controllers
  */
 class MainController extends Controller
 {

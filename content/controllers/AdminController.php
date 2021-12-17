@@ -1,12 +1,13 @@
 <?php
 
-namespace app\controllers;
+namespace content\controllers;
 
-use app\core\Controller;
-use app\lib\Pagination;
+use engine\core\Controller;
+use engine\libs\Pagination;
 
 /**
  * Class AdminController
+ * @package content\controllers
  */
 class AdminController extends Controller
 {

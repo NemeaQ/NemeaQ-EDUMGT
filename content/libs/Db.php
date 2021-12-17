@@ -7,7 +7,7 @@ use mysqli_sql_exception;
 
 /**
  * Class Db
- * @package app\lib
+ * @package app\libs
  */
 class Db
 {
