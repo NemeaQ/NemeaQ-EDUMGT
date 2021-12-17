@@ -1,13 +1,13 @@
 <?php
 
-namespace app\controllers;
+namespace content\controllers;
 
-use app\core\Controller;
-use app\lib\SocketServer;
+use engine\core\Controller;
+use content\libs\SocketServer;
 
 /**
  * Class ApiController
- * @package app\controllers
+ * @package content\controllers
  */
 class ApiController extends Controller
 {

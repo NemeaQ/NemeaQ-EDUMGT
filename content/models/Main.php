@@ -1,9 +1,9 @@
 <?php
 
-namespace app\models;
+namespace content\models;
 
-use app\core\Model;
-use app\lib\Db;
+use engine\core\Model;
+use engine\libs\Db;
 
 /**
  * Class Main

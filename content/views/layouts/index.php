@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="/src/css/index.min.css">
     <!-- Bootstrap CSS -->
-    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../src/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/5c9c921f7a.js" crossorigin="anonymous"></script>
 </head>
@@ -212,9 +212,9 @@
 
 <div class="notify top-right"></div>
 <?php if (isset($debug) && $debug): ?>
-    <script src="src/js/bundle.js"></script>
+    <script src="../../../src/js/bundle.js"></script>
 <?php else: ?>
-    <script src="src/js/bundle.min.js"></script>
+    <script src="../../../src/js/bundle.min.js"></script>
 <?php endif; ?>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <?php
 
-namespace app\controllers;
+namespace content\controllers;
 
-use app\core\Controller;
+use engine\core\Controller;
 
 /**
  * Class AccountController
- * @package app\controllers
+ * @package content\controllers
  */
 class AccountController extends Controller
 {

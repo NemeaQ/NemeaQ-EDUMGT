@@ -9,7 +9,7 @@ ob_implicit_flush();
 
 require 'CardWorker.php';
 
-require_once __DIR__.'/../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $wsWorker = new Worker('websocket://0.0.0.0:7777');
 $wsWorker->count = 4;

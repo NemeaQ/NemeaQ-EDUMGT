@@ -1,10 +1,10 @@
 <?php
 
-namespace app\models;
+namespace content\models;
 
-use app\core\Model;
-use app\lib\Db;
-use app\lib\PHPMailer\PHPMailer;
+use engine\core\Model;
+use engine\libs\Db;
+use content\libs\PHPMailer;
 
 /**
  * Class Account
