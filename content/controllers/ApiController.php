@@ -11,13 +11,23 @@ use content\libs\SocketServer;
  */
 class ApiController extends Controller
 {
+
+    public $routes = [
+        /** Route                       => Controller Action */
+        /** API */
+        'api/status' => ['api', 'status',],
+        'api/link/{token:.*}' => ['api', 'link',],
+        'api/cardSocket' => ['api', 'cardSocket',],
+    ];
+
     /**
      * @param mixed $route
      *
      * @return void
      */
-    public function __construct($route)
-    {
+    public function __construct() { }
+
+    public function load($route) {
         $this->acl = [
             'all' => ['cardSocket'],
             'authorize' => [],

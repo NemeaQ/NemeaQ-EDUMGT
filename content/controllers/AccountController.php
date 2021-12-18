@@ -10,13 +10,24 @@ use engine\core\Controller;
  */
 class AccountController extends Controller
 {
+    public $routes = [
+        /** Route                       => Controller Action */
+        /** Account */
+        'login' => ['account', 'login',],
+        'profile' => ['account', 'profile'],
+        'logout' => ['account', 'logout',],
+        'register' => ['account', 'register',],
+        'account/confirm/{token:.*}' => ['account', 'confirm',],
+        'settings' => ['account', 'settings',]
+    ];
     /**
      * @param mixed $route
      *
      * @return void
      */
-    public function __construct($route)
-    {
+    public function __construct() {}
+
+    public function load($route) {
         $this->acl = [
             'all' => [],
             'authorize' => ['profile', 'logout', 'settings',],
