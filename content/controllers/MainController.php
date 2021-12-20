@@ -26,7 +26,7 @@ class MainController extends Controller
      */
     public function __construct() { }
 
-    public function loadC($route) {
+    public function load($route) {
         $this->acl = [
             'all' => ['index', 'rules', 'copy', 'map', 'donate'],
             'authorize' => [],
