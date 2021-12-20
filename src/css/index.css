@@ -17,12 +17,12 @@
 @import "blocks/page.css";
 @import "blocks/progress.css";
 @import "blocks/alert.css";
-
-@import "blocks/clard.css";
+@import "blocks/card.css";
 
 /* Main */
 
 @import "blocks/header.css";
+@import "blocks/aside.css";
 @import "blocks/main.css";
 @import "blocks/footer.css";
 
@@ -60,7 +60,7 @@ details {
 }
 
 summary {
-    font-family: CircularBold, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 details summary::-webkit-details-marker {

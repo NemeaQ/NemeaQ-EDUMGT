@@ -12,7 +12,7 @@
     .menu__button {
         z-index: 1;
         display: block;
-        margin: 24px 16px 0 0;
+        margin: 8px;
         padding: 0;
         border: none;
         background-color: transparent;
@@ -31,7 +31,7 @@
 @media (max-width: 800px) {
     .menu__icon {
         display: block;
-        fill: #fff;
+        fill: #333;
     }
 
     .menu__icon:hover {
@@ -65,7 +65,7 @@
         padding-bottom: 22px;
         padding-left: 64px;
         box-shadow: 0 50vh 0 50vh rgba(59, 132, 187, 0.1);
-        background-color: #222222;
+        background-color: var(--bg-light);
     }
 
     .menu__list--open {
@@ -75,10 +75,10 @@
 
 @media (min-width: 800px) {
     .menu__list {
-        display: grid;
-        grid-auto-flow: column;
-        column-gap: 8px;
-        align-items: center;
+        /*display: grid;*/
+        /*grid-auto-flow: column;*/
+        /*column-gap: 8px;*/
+        /*align-items: center;*/
     }
 }
 
