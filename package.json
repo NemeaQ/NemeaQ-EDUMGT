@@ -2,7 +2,7 @@
   "private": true,
   "name": "obsidianorder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Education Organization Management System",
   "main": "index.js",
   "devDependencies": {
     "postcss": "^8.4.5",
@@ -29,7 +29,7 @@
     "url": "git+https://github.com/NemeaQ/EDUMGT.git"
   },
   "author": "NemeaQ",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/NemeaQ/EDUMGT/issues"
   },
