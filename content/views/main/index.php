@@ -7,7 +7,7 @@
             <div class="card__actions">
                 <input type="date" id="cardDate">
                 <label><input type="checkbox" id="cardEnable"> ОК</label>
-                <button class="btn btn-primary" onclick="sendStart()">Проверить карты</button>
+                <button class="btn btn-primary" id="btn_sendStart">Проверить карты</button>
             </div>
         </div>
         <div class="card__body">
