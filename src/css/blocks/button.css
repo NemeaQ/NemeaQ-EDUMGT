@@ -44,16 +44,16 @@
 }
 
 
-.btn-green {
+.btn-accent {
     color: #fff;
     fill: #fff;
     background-color: var(--accent);
 }
 
-.btn-green:hover {
-    color: #fff;
-    fill: #fff;
+.btn-accent:hover {
+    color: #000;
+    fill: #000;
     background-color: transparent;
-    border-color: #7d3c99;
+    border-color: var(--accent-dark);
 }
 

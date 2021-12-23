@@ -47,7 +47,7 @@
                 <input type="password" class="form-control" name="password">
             </div>
         </div>
-        <button type="submit" class="btn btn-blue">Сохранить</button>
+        <button type="submit" class="btn btn-accent">Сохранить</button>
     </form>
 </div>
 

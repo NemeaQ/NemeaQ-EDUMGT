@@ -6,8 +6,7 @@
     <title><?= $title ?>EDUMGT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#222">
-    <meta name="description"
-          content="Единая автоматизированная информационная система &quot;Управление образовательной организацие&quot;">
+    <meta name="description" content="Единая автоматизированная информационная система &quot;Управление образовательной организацией&quot;">
 
     <link rel="icon" href="/src/img/icon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/img/logo-32x32.png">
@@ -15,9 +14,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/src/img/logo-180x180.png.png">
     <link rel="manifest" href="/src/site.webmanifest">
 
-    <link rel="stylesheet" href="/src/css/index.min.css">
+    <link href="/src/css/index.min.css" rel="stylesheet" >
     <!-- Bootstrap CSS -->
-    <link href="../../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/5c9c921f7a.js" crossorigin="anonymous"></script>
 </head>
@@ -211,9 +210,9 @@
 
 <div class="notify top-right"></div>
 <?php if (isset($debug) && $debug): ?>
-    <script src="../../../src/js/bundle.js"></script>
+    <script src="/src/js/bundle.js"></script>
 <?php else: ?>
-    <script src="../../../src/js/bundle.min.js"></script>
+    <script src="/src/js/bundle.min.js"></script>
 <?php endif; ?>
 </body>
 </html>

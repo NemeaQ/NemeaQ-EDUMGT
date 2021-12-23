@@ -45,8 +45,8 @@ class AccountController extends Controller
         if (!empty($_POST)) {
             if (!$this->model->validate(['email', 'password'], $_POST)) {
                 $this->view->message('error', $this->model->error);
-            } elseif (!$this->model->checkRecaptcha($_POST['g-recaptcha-response'])) {
-                $this->view->message('error', 'Подтвердите что вы не робот');
+//            } elseif (!$this->model->checkRecaptcha($_POST['g-recaptcha-response'])) {
+//                $this->view->message('error', 'Подтвердите что вы не робот');
             } elseif ($this->model->checkEmailExists($_POST['email'])) {
                 $this->view->message('error', 'Этот E-mail уже используется');
             } elseif ($_POST["password"] != $_POST["password2"]) {

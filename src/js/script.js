@@ -22,82 +22,8 @@
  * SOFTWARE.
  */
 
-let parse = require('chart.js')
-
-let exampleSocket = new WebSocket("ws://edumgt.hanriel.ru:7777");
-let socketOutput = document.getElementById('socketOutput');
-let cardDate = document.getElementById('cardDate');
-let cardEnable = document.getElementById('cardEnable');
-
-
-let today = new Date();
-cardDate.value = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-
-// exampleSocket.onopen = function (event) {
-    // exampleSocket.send("checkSession");
-// };
-
-exampleSocket.onmessage = function (event) {
-    socketOutput.innerHTML += event.data;
-};
-
-let btn_sendStart = document.getElementById('btn_sendStart');
-btn_sendStart.addEventListener('click', () => {
-    exampleSocket.send("start " + cardDate.value + " " + cardEnable.checked);
-});
-
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: [
-            '1 дек',
-            '2 дек',
-            '3 дек',
-            '6 дек',
-            '7 дек',
-            '8 дек',
-            '9 дек',
-            '10 дек',
-            '13 дек',
-            '14 дек',
-            '15 дек',
-            '16 дек',
-            '17 дек',
-            '20 дек'
-        ],
-        datasets: [{
-            label: 'План',
-            data: [827, 784, 742, 775, 789, 821, 836, 822, 893, 1237, 1238, 944, 936, 1239],
-            borderColor: 'rgb(54, 162, 235)',
-            tension: 0.4
-        },
-        {
-            label: 'Факт',
-            data: [827, 784, 742, 775, 789, 821, 836, 822, 893, 895, 900, 944, 936, 940],
-            borderColor: 'rgb(235,54,75)',
-            tension: 0.4
-        }]
-    },
-    options: {
-        scales: {
-            // x: {
-            //     type: 'time',
-            //     time: {
-            //         tooltipFormat: 'DD T'
-            //     },
-            //     title: {
-            //         display: true,
-            //         text: 'Date'
-            //     }
-            // },
-            y: {
-                max: 1246,
-                min: 0
-            }
-        }
-    }
-});
+let lib_chartjs = require('chart.js');
+let lib_bs = require('bootstrap/dist/js/bootstrap.min');
 
 const menuButton = document.querySelector('.menu__button');
 const menuList = document.querySelector('.menu__list');
@@ -111,48 +37,47 @@ if (!!menuButton) {
     });
 }
 
-const form = document.querySelector('form');
-const notificator = document.querySelector('.notify');
+let cardDate = document.getElementById('cardDate');
+if(!!cardDate){
+    let exampleSocket = new WebSocket("ws://edumgt.hanriel.ru:7777");
+    let socketOutput = document.getElementById('socketOutput');
+    let cardEnable = document.getElementById('cardEnable');
 
-if (!!form) {
-    form.addEventListener('submit', () => {
-        if (form.id === 'no_ajax') {
-            return;
-        }
-        event.preventDefault();
+    let today = new Date();
+    cardDate.value = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
-        let request = new XMLHttpRequest();
-        request.open(form.method, form.action, true);
+    // exampleSocket.onopen = function (event) {
+        // exampleSocket.send("checkSession");
+    // };
 
-        request.onload = function () {
-            if (this.status >= 200 && this.status < 400) {
-                let data = JSON.parse(this.response);
-                if (data.url) {
-                    window.location.href = "/" + data.url;
-                } else if (data.reload) {
-                    window.location.reload();
-                } else {
-                    notify(data.message, data.status);
-                }
-            } else {
-                notify('Ошибка при подключении к серверу, повторите попыку позднее', 'error');
-            }
-        };
+    exampleSocket.onmessage = function (event) {
+        socketOutput.innerHTML += event.data;
+    };
 
-        request.onerror = (e) => notify(e.returnValue, 'error');
-        request.send(new FormData(form));
+    let btn_sendStart = document.getElementById('btn_sendStart');
+    btn_sendStart.addEventListener('click', () => {
+        exampleSocket.send("start " + cardDate.value + " " + cardEnable.checked);
+    });
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1 дек','2 дек', '3 дек',
+                '6 дек', '7 дек', '8 дек','9 дек','10 дек',
+                '13 дек','14 дек','15 дек','16 дек','17 дек',
+                '20 дек','21 дек','22 дек'
+            ],
+            datasets: [{
+                label: 'План',
+                data: [827, 784, 742, 775, 789, 821, 836, 822, 893, 1237, 1238, 944, 936, 1239, 994, 1239],
+                borderColor: 'rgb(54, 162, 235)',
+                tension: 0.4
+            }]
+        },
+        options: { scales: { y: { max: 1246 } } }
     });
 }
 
-function notify(text, type = 'notice') {
-    if (text) {
-        notificator.innerHTML = text;
-        notificator.setAttribute("data-notification-status", type);
-        notificator.classList.add('do-show');
-        setTimeout(function () {
-            notificator.classList.remove('do-show');
-        }, 4000);
-    }
-}
+document.addEventListener("DOMContentLoaded", page_ready);
 
-window.notify = notify;
