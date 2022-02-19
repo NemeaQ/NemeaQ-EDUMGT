@@ -6,10 +6,18 @@
     //'mysql_host' => 'db.edumgt.hanriel.ru',
     'mysql_host' => 'localhost',
     'mysql_port' => '3306',
-    'mysql_base' => 'edumgt',
-    'mysql_user' => 'root',
-    'mysql_password' => 'ML7jh+8NUtJD*pP%',
+    'mysql_base' => 'sch24perm_edumgt',
+    'mysql_user' => 'sch24perm_edumgt',
+    'mysql_password' => '2pFyfZYR',
+    'mysql_table_prefix' => 'em_',
     /** RECAPTCHA **/
     'captcha_site_token' => '6LfxQ6YcAAAAAKe24eHaSACGaBqcYKtE_1SbQJG',
-    'captcha_secret_token' => '6LePM70bAAAAAFGFbRuqcVR8H53NjuM7tQgPXSuH'
+    'captcha_secret_token' => '6LePM70bAAAAAFGFbRuqcVR8H53NjuM7tQgPXSuH',
+    /** LDAP **/
+    'ldap_host' => '212.33.246.122',
+    'ldap_port' => 389,
+    'ldap_name' => 'sch24perm_snet',
+    'ldap_user' => 'Администратор',
+    'ldap_password' => 'fortnox2014!',
+    'ldap_domain' => 'local.sch24perm.ru'
 ];

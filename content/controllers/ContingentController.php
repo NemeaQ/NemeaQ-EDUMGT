@@ -26,33 +26,35 @@
 namespace content\controllers;
 
 use engine\core\Controller;
-use engine\core\Model;
 
 /**
- * Class MainController
- * @package content\controllers
+ * Class ContingentController
+ * @package application\controllers
  */
-class MainController extends Controller
+class ContingentController extends Controller
 {
+
     public $routes = [
         /** Route                       => Controller Action */
-        ''                              => ['main', 'index',],
-        'rules'                         => ['main', 'rules',],
-        'map'                           => ['main', 'map',],
-        'donate'                        => ['main', 'donate',],
-        'copy'                          => ['main', 'copy',],
+        /** Report */
+        'cont/list.*' => ['contingent', 'list'],
+        'cont/ucl' => ['contingent', 'uploadChildList'],
     ];
+
     /**
      * @param mixed $route
      *
      * @return void
      */
-    public function __construct() { }
+    public function __construct()
+    {
+    }
 
-    public function load($route) {
+    public function load($route)
+    {
         $this->acl = [
-            'all' => ['index', 'rules', 'copy', 'map', 'donate'],
-            'authorize' => [],
+            'all' => ['public'],
+            'authorize' => ['list', 'uploadChildList'],
             'guest' => [],
             'admin' => [],
         ];
@@ -62,45 +64,47 @@ class MainController extends Controller
     /**
      *
      */
-    public function indexAction()
+    public function listAction()
     {
-        if (isset($_SESSION['account']['id'])) {
-            $this->view->render('Главная | ');
+        if (isset($_GET['pageno'])) {
+            $pageno = $_GET['pageno'];
         } else {
-            //$this->route = ['account', 'login'];
-            $this->view->path = "account/login";
-            $this->view->layout = "login";
-            $this->view->render('Главная | ');
+            $pageno = 1;
         }
 
+        if (isset($_GET['count'])) {
+            $per_page = $_GET['count'];
+        } else {
+            $per_page = 100;
+        }
+
+        if (isset($_GET['class'])) {
+            $class = 'where class=' . $_GET['class'];
+        } else {
+            $class = '';
+        }
+
+        $no_of_records_per_page = $per_page;
+        $offset = ($pageno - 1) * $no_of_records_per_page;
+
+        $total_rows = $this->model->db->column("SELECT COUNT(*) FROM sn_childs");
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+        $vars = [
+            'list' => $this->model->loadList($offset, $no_of_records_per_page, $class),
+            'classList' => $this->model->classList(),
+        ];
+
+        //$this->model->uploadChildsList();
+        $this->view->render('Title', $vars);
     }
 
-    /**
-     *
-     */
-    public function copyAction()
+    public function uploadChildListAction()
     {
-        $this->view->render('Пользовательское соглашение и согласие на обработку персональных данных | ');
+        if (isset($_POST['list'])) {
+            $this->model->uploadChildsList($_POST['list']);
+        }
+        $this->view->render('UCL');
     }
 
-    public function showAction()
-    {
-        $this->view->render('Просмотр страницы | ');
-    }
-
-    public function rulesAction()
-    {
-        $this->view->render('Правила | ');
-    }
-
-    public function mapAction()
-    {
-        $this->view->render('Карта | ');
-    }
-
-    public function donateAction()
-    {
-        $this->view->render('Донат | ');
-    }
 }
-

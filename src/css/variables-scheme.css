@@ -1,12 +1,36 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 NemeaQ
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 :root, html, body {
-	--light: #FAFAFA;
-	--dark: #0b031b;
-	--dark-light: #1e113b;
-	--dark-vibrant: #250b5a;
-	--accent: #2972FF;
-	--accent-dark: #2565e6;
-	--accent-secondary: #1caacc;
-	--bg-light: #E9E9E9;
-	--bg-dark: #222;
-	--text-accent: #250b5a;
+    --light: #FAFAFA;
+    --dark: #0b031b;
+    --dark-light: #1e113b;
+    --dark-vibrant: #250b5a;
+    --accent: #2972FF;
+    --accent-dark: #2565e6;
+    --accent-secondary: #1caacc;
+    --bg-light: #E9E9E9;
+    --bg-dark: #04204A;
+    --text-accent: #250b5a;
 }
