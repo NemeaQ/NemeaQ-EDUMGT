@@ -6,7 +6,8 @@
     <title><?= $title ?>EDUMGT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#222">
-    <meta name="description" content="Единая автоматизированная информационная система &quot;Управление образовательной организацией&quot;">
+    <meta name="description"
+          content="Единая автоматизированная информационная система &quot;Управление образовательной организацией&quot;">
 
     <link rel="icon" href="/src/img/icon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/img/logo-32x32.png">
@@ -14,9 +15,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/src/img/logo-180x180.png.png">
     <link rel="manifest" href="/src/site.webmanifest">
 
-    <link href="/src/css/index.min.css" rel="stylesheet" >
     <!-- Bootstrap CSS -->
     <link href="/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/index.min.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/5c9c921f7a.js" crossorigin="anonymous"></script>
 </head>
@@ -37,27 +38,48 @@
             </svg>
         </button>
         <ul class="menu__list" id="menu__list">
-            <li class="menu__item">
-                <a class="menu__link" href="/">Главная</a>
+            <li class="menu__item"><i class="fa-solid fa-diagram-project"></i>
+                <a class="menu__link" href="projects">Проекты</a>
+            </li>
+            <li class="menu__item"><i class="fa-solid fa-file-chart-pie"></i>
+                <a class="menu__link" href="reports">Отчеты</a>
+            </li>
+            <li class="menu__item"><i class="fa-solid fa-backpack"></i>
+                <a class="menu__link" href="epos">ЭПОС</a>
+            </li>
+            <li class="menu__item"><i class="fa-solid fa-folder-tree"></i>
+                <a class="menu__link" href="files">Файлы</a>
             </li>
             <!--        <li class="menu__item">-->
             <!--            <a class="menu__link" href="rules">Правила</a>-->
             <!--        </li>-->
-            <?php if (isset($_SESSION['account']['id'])): ?>
-                <li class="menu__item">
-                    <a class="menu__link" href="profile">Профиль</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="logout">Выход</a>
-                </li>
-            <?php else: ?>
-                <li class="menu__item">
-                    <a class="menu__link" href="login">Вход</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="register">Регистрация</a>
-                </li>
-            <?php endif; ?>
+            <?php
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 NemeaQ
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+            //if (isset($_SESSION['account']['id'])):
+            ?>
         </ul>
     </nav>
 
@@ -205,10 +227,9 @@
             </li>
         </ul>
     </nav>
+    <div class="notify top-right"></div>
     <?php echo $content; ?>
 </main>
-
-<div class="notify top-right"></div>
 <?php if (isset($debug) && $debug): ?>
     <script src="/src/js/bundle.js"></script>
 <?php else: ?>
