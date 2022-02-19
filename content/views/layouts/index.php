@@ -54,7 +54,7 @@
             <!--            <a class="menu__link" href="rules">Правила</a>-->
             <!--        </li>-->
             <?php
-/*
+            /*
  * MIT License
  *
  * Copyright (c) 2022 NemeaQ
@@ -139,8 +139,9 @@
                                         read</a></div>
                             </div>
                         </div>
-                        <div class="scrollbar-overlay os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"
-                             style="max-height:19rem">
+                        <div
+                                class="scrollbar-overlay os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"
+                                style="max-height:19rem">
                             <div class="os-resize-observer-host observed">
                                 <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
                             </div>
@@ -149,25 +150,26 @@
                             </div>
                             <div class="os-content-glue" style="margin: 0px;"></div>
                             <div class="os-padding">
-                                <div class="os-viewport os-viewport-native-scrollbars-invisible os-viewport-native-scrollbars-overlaid">
+                                <div
+                                        class="os-viewport os-viewport-native-scrollbars-invisible os-viewport-native-scrollbars-overlaid">
                                     <div class="os-content" style="padding: 0px; height: 100%; width: 100%;">
                                         <div class="list-group list-group-flush fw-normal fs--1">
                                             <div class="list-group-title border-bottom">NEW</div>
-<!--                                            <div class="list-group-item">-->
-<!--                                                <a class="notification notification-flush notification-unread"-->
-<!--                                                   href="#!">-->
-<!--                                                    <div class="notification-avatar">-->
-<!--                                                        <div class="avatar avatar-2xl me-3">-->
-<!--                                                            <img class="rounded-circle"-->
-<!--                                                                 src="assets/img/team/1-thumb.png" alt="">-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="notification-body">-->
-<!--                                                        <p class="mb-1"><strong>Emma Watson</strong> replied to your comment : "Hello world 😍"</p>-->
-<!--                                                        <span class="notification-time"><span class="me-2" role="img" aria-label="Emoji">💬</span>Just now</span>-->
-<!--                                                    </div>-->
-<!--                                                </a>-->
-<!--                                            </div>-->
+                                            <!--                                            <div class="list-group-item">-->
+                                            <!--                                                <a class="notification notification-flush notification-unread"-->
+                                            <!--                                                   href="#!">-->
+                                            <!--                                                    <div class="notification-avatar">-->
+                                            <!--                                                        <div class="avatar avatar-2xl me-3">-->
+                                            <!--                                                            <img class="rounded-circle"-->
+                                            <!--                                                                 src="assets/img/team/1-thumb.png" alt="">-->
+                                            <!--                                                        </div>-->
+                                            <!--                                                    </div>-->
+                                            <!--                                                    <div class="notification-body">-->
+                                            <!--                                                        <p class="mb-1"><strong>Emma Watson</strong> replied to your comment : "Hello world 😍"</p>-->
+                                            <!--                                                        <span class="notification-time"><span class="me-2" role="img" aria-label="Emoji">💬</span>Just now</span>-->
+                                            <!--                                                    </div>-->
+                                            <!--                                                </a>-->
+                                            <!--                                            </div>-->
 
                                             <div class="list-group-title border-bottom">EARLIER</div>
                                             <div class="list-group-item">
@@ -190,19 +192,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+                            <div
+                                    class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
                                 <div class="os-scrollbar-track os-scrollbar-track-off">
                                     <div class="os-scrollbar-handle" style="transform: translate(0px, 0px);"></div>
                                 </div>
                             </div>
-                            <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable os-scrollbar-auto-hidden">
+                            <div
+                                    class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable os-scrollbar-auto-hidden">
                                 <div class="os-scrollbar-track os-scrollbar-track-off">
                                     <div class="os-scrollbar-handle" style="transform: translate(0px, 0px);"></div>
                                 </div>
                             </div>
                             <div class="os-scrollbar-corner"></div>
                         </div>
-                        <div class="card-footer text-center border-top"><a class="card-link d-block" href="app/social/notifications.html">View all</a></div>
+                        <div class="card-footer text-center border-top"><a class="card-link d-block"
+                                                                           href="app/social/notifications.html">View
+                                all</a></div>
                     </div>
                 </div>
             </li>

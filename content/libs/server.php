@@ -51,7 +51,7 @@ $wsWorker->onMessage = function ($connection, $data) use ($wsWorker) {
             case 'checkSession':
 
             case 'start':
-            $cardDorker = new CardWorker($arg[1], $clientConnection);
+                $cardDorker = new CardWorker($arg[1], $clientConnection);
 
             $cardDorker->date = $arg[1];
             //$cardDorker->connection = $clientConnection;

@@ -36,20 +36,24 @@ class MainController extends Controller
 {
     public $routes = [
         /** Route                       => Controller Action */
-        ''                              => ['main', 'index',],
-        'rules'                         => ['main', 'rules',],
-        'map'                           => ['main', 'map',],
-        'donate'                        => ['main', 'donate',],
-        'copy'                          => ['main', 'copy',],
+        '' => ['main', 'index',],
+        'rules' => ['main', 'rules',],
+        'map' => ['main', 'map',],
+        'donate' => ['main', 'donate',],
+        'copy' => ['main', 'copy',],
     ];
+
     /**
      * @param mixed $route
      *
      * @return void
      */
-    public function __construct() { }
+    public function __construct()
+    {
+    }
 
-    public function load($route) {
+    public function load($route)
+    {
         $this->acl = [
             'all' => ['index', 'rules', 'copy', 'map', 'donate'],
             'authorize' => [],

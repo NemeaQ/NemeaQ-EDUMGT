@@ -27,7 +27,8 @@
                                             <form action="/admin/groups" method="post">
                                                 <input type="hidden" name="type" value="user">
                                                 <input type="hidden" name="id" value="<?php echo $val['id']; ?>">
-                                                <button type="submit" class="btn btn-primary">Добавить участников</button>
+                                                <button type="submit" class="btn btn-primary">Добавить участников
+                                                </button>
                                                 <button type="submit" class="btn btn-danger">Удалить</button>
                                             </form>
                                         </td>

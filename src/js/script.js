@@ -26,7 +26,7 @@ let lib_chartjs = require('chart.js');
 let lib_bs = require('bootstrap/dist/js/bootstrap.min');
 
 let cardDate = document.getElementById('cardDate');
-if(!!cardDate){
+if (!!cardDate) {
     let exampleSocket = new WebSocket("ws://edumgt.hanriel.ru:7777");
     let socketOutput = document.getElementById('socketOutput');
     let cardEnable = document.getElementById('cardEnable');
@@ -35,7 +35,7 @@ if(!!cardDate){
     cardDate.value = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     // exampleSocket.onopen = function (event) {
-        // exampleSocket.send("checkSession");
+    // exampleSocket.send("checkSession");
     // };
 
     exampleSocket.onmessage = function (event) {
@@ -51,10 +51,10 @@ if(!!cardDate){
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['1 дек','2 дек', '3 дек',
-                '6 дек', '7 дек', '8 дек','9 дек','10 дек',
-                '13 дек','14 дек','15 дек','16 дек','17 дек',
-                '20 дек','21 дек','22 дек'
+            labels: ['1 дек', '2 дек', '3 дек',
+                '6 дек', '7 дек', '8 дек', '9 дек', '10 дек',
+                '13 дек', '14 дек', '15 дек', '16 дек', '17 дек',
+                '20 дек', '21 дек', '22 дек'
             ],
             datasets: [{
                 label: 'План',

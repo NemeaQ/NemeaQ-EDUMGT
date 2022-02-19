@@ -28,8 +28,8 @@
 
 <?php if ($this->route['action'] != 'login'): ?>
     <footer class="footer">
-        <small>&copy; 2021, NemeaQ | 
-            <?php if( PHP_OS !== "WINNT") echo "Текушая нагрузка на систему: ".round(sys_getloadavg()[0], 2);?>
+        <small>&copy; 2021, NemeaQ |
+            <?php if (PHP_OS !== "WINNT") echo "Текушая нагрузка на систему: " . round(sys_getloadavg()[0], 2); ?>
         </small>
     </footer>
 <?php endif; ?>
