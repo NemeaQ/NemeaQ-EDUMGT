@@ -29,7 +29,9 @@
                                         <td><?php echo date('d.m.Y в H:i', $val['unixTimeStart']); ?></td>
                                         <td><?php echo date('d.m.Y в H:i', $val['unixTimeFinish']); ?></td>
                                         <td><?php echo $val['sumIn']; ?> $</td>
-                                        <td><?php echo round($val['sumIn'] + ($val['sumIn'] * $val['percent']) / 100, 2); ?> $</td>
+                                        <td><?php echo round($val['sumIn'] + ($val['sumIn'] * $val['percent']) / 100, 2); ?>
+                                            $
+                                        </td>
                                         <td><?php echo $val['percent']; ?> %</td>
                                         <td><?php echo $val['login']; ?></td>
                                         <td><?php echo $val['email']; ?></td>

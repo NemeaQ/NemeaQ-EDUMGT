@@ -1,12 +1,35 @@
 <?php
-
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 NemeaQ
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 
 namespace app\lib;
 
 /**
  * Класс WebSocket сервера
  */
-class WebSocketServer {
+class WebSocketServer
+{
 
     /**
      * Функция вызывается, когда получено сообщение от клиента
@@ -56,13 +79,14 @@ class WebSocketServer {
     private $resource;
 
 
-    public function __construct($ip = '127.0.0.1', $port = 7777) {
+    public function __construct($ip = '127.0.0.1', $port = 7777)
+    {
         $this->ip = $ip;
         $this->port = $port;
 
         // эта функция вызывается, когда получено сообщение от клиента;
         // при создании экземпляра класса должна быть переопределена
-        $this->handler = function($connection, $data) {
+        $this->handler = function ($connection, $data) {
             $message = '[' . date('r') . '] Получено сообщение от клиента: ' . $data . PHP_EOL;
             if ($this->verbose) {
                 echo $message;
@@ -73,7 +97,8 @@ class WebSocketServer {
         };
     }
 
-    public function __destruct() {
+    public function __destruct()
+    {
         if (is_resource($this->connection)) {
             $this->stopServer();
         }
@@ -85,7 +110,8 @@ class WebSocketServer {
     /**
      * Дополнительные настройки для отладки
      */
-    public function settings($timeLimit = 0, $verbose = false, $logging = false, $logFile = 'ws-log.txt') {
+    public function settings($timeLimit = 0, $verbose = false, $logging = false, $logFile = 'ws-log.txt')
+    {
         $this->timeLimit = $timeLimit;
         $this->verbose = $verbose;
         $this->logging = $logging;
@@ -98,7 +124,8 @@ class WebSocketServer {
     /**
      * Выводит сообщение в консоль и/или записывает в лог-файл
      */
-    private function debug($message) {
+    private function debug($message)
+    {
         $message = '[' . date('r') . '] ' . $message . PHP_EOL;
         if ($this->verbose) {
             echo $message;
@@ -111,14 +138,16 @@ class WebSocketServer {
     /**
      * Отправляет сообщение клиенту
      */
-    public static function response($connect, $data) {
+    public static function response($connect, $data)
+    {
         socket_write($connect, self::encode($data));
     }
 
     /**
      * Запускает сервер в работу
      */
-    public function startServer() {
+    public function startServer()
+    {
 
         $this->debug('Try start server...');
 
@@ -167,7 +196,7 @@ class WebSocketServer {
              * $this->connects для дальнейшего чтения из него.
              */
 
-            if ( ! socket_select($read, $write, $except, null)) { // ожидаем сокеты, доступные для чтения (без таймаута)
+            if (!socket_select($read, $write, $except, null)) { // ожидаем сокеты, доступные для чтения (без таймаута)
                 break;
             }
 
@@ -179,7 +208,7 @@ class WebSocketServer {
                     $this->connects[] = $connect; // добавляем его в список необходимых для обработки
                 }
                 // удаляем слушающий сокет из массива для чтения
-                unset($read[ array_search($this->connection, $read) ]);
+                unset($read[array_search($this->connection, $read)]);
             }
 
             foreach ($read as $connect) { // обрабатываем все соединения, в которых есть данные для чтения
@@ -191,7 +220,7 @@ class WebSocketServer {
                     socket_write($connect, self::encode('  Closed on client demand', 'close'));
                     socket_shutdown($connect);
                     socket_close($connect);
-                    unset($this->connects[ array_search($connect, $this->connects) ]);
+                    unset($this->connects[array_search($connect, $this->connects)]);
                     $this->debug('Closed successfully');
                     continue;
                 }
@@ -216,7 +245,8 @@ class WebSocketServer {
     /**
      * Останавливает работу сервера
      */
-    public function stopServer() {
+    public function stopServer()
+    {
         // закрываем слушающий сокет
         socket_close($this->connection);
         if (!empty($this->connects)) { // отправляем все клиентам сообщение о разрыве соединения
@@ -233,7 +263,8 @@ class WebSocketServer {
     /**
      * Для кодирования сообщений перед отправкой клиенту
      */
-    private static function encode($payload, $type = 'text', $masked = false) {
+    private static function encode($payload, $type = 'text', $masked = false)
+    {
         $frameHead = array();
         $payloadLength = strlen($payload);
 
@@ -301,8 +332,9 @@ class WebSocketServer {
     /**
      * Для декодирования сообщений, полученных от клиента
      */
-    private static function decode($data) {
-        if ( ! strlen($data)) {
+    private static function decode($data)
+    {
+        if (!strlen($data)) {
             return false;
         }
 
@@ -392,7 +424,8 @@ class WebSocketServer {
     /**
      * «Рукопожатие», т.е. отправка заголовков согласно протоколу WebSocket
      */
-    private function handshake($connect) {
+    private function handshake($connect)
+    {
 
         $info = array();
 
@@ -413,7 +446,7 @@ class WebSocketServer {
 
         // получаем адрес клиента
         $ip = $port = null;
-        if ( ! socket_getpeername($connect, $ip, $port)) {
+        if (!socket_getpeername($connect, $ip, $port)) {
             return false;
         }
         $info['ip'] = $ip;
@@ -429,7 +462,7 @@ class WebSocketServer {
         $upgrade = "HTTP/1.1 101 Web Socket Protocol Handshake\r\n" .
             "Upgrade: websocket\r\n" .
             "Connection: Upgrade\r\n" .
-            "Sec-WebSocket-Accept:".$SecWebSocketAccept."\r\n\r\n";
+            "Sec-WebSocket-Accept:" . $SecWebSocketAccept . "\r\n\r\n";
         socket_write($connect, $upgrade);
 
         return true;

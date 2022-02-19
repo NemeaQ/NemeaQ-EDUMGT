@@ -1,1 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 424.28"><defs><style>.a{fill:#9b4dca;}.b{fill:none;stroke:#9b4dca;stroke-linecap:round;stroke-linejoin:round;stroke-width:16px;}</style></defs><g><g><g><path class="a" d="M185.72,16,356,114.31,355.45,310,186.28,408.28,16,310l.55-195.66L185.72,16m0-16a15.94,15.94,0,0,0-8,2.17L8.52,100.47a16,16,0,0,0-8,13.79L0,309.93a16,16,0,0,0,8,13.9l170.28,98.31a16,16,0,0,0,16,0l169.16-98.31a16,16,0,0,0,8-13.79L372,114.36a16,16,0,0,0-8-13.9L193.72,2.14a16,16,0,0,0-8-2.14Z"/><polygon class="b" points="300.32 146.93 187.56 212.46 74.05 146.93 186.81 81.4 300.32 146.93"/><polygon class="b" points="300.32 146.93 299.95 277.36 187.19 342.89 187.56 212.46 300.32 146.93"/><polygon class="b" points="187.56 212.46 187.19 342.89 73.68 277.35 74.05 146.93 187.56 212.46"/></g></g></g></svg>
+<!--
+  - MIT License
+  -
+  - Copyright (c) 2022 NemeaQ
+  -
+  - Permission is hereby granted, free of charge, to any person obtaining a copy
+  - of this software and associated documentation files (the "Software"), to deal
+  - in the Software without restriction, including without limitation the rights
+  - to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  - copies of the Software, and to permit persons to whom the Software is
+  - furnished to do so, subject to the following conditions:
+  -
+  - The above copyright notice and this permission notice shall be included in all
+  - copies or substantial portions of the Software.
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  - IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  - FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  - AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  - LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  - OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  - SOFTWARE.
+  -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 424.28">
+    <defs>
+        <style>
+            .a{fill:#9b4dca;}.b{fill:none;stroke:#9b4dca;stroke-linecap:round;stroke-linejoin:round;stroke-width:16px;}
+        </style>
+    </defs>
+    <g>
+        <g>
+            <g>
+                <path class="a"
+                      d="M185.72,16,356,114.31,355.45,310,186.28,408.28,16,310l.55-195.66L185.72,16m0-16a15.94,15.94,0,0,0-8,2.17L8.52,100.47a16,16,0,0,0-8,13.79L0,309.93a16,16,0,0,0,8,13.9l170.28,98.31a16,16,0,0,0,16,0l169.16-98.31a16,16,0,0,0,8-13.79L372,114.36a16,16,0,0,0-8-13.9L193.72,2.14a16,16,0,0,0-8-2.14Z"/>
+                <polygon class="b" points="300.32 146.93 187.56 212.46 74.05 146.93 186.81 81.4 300.32 146.93"/>
+                <polygon class="b" points="300.32 146.93 299.95 277.36 187.19 342.89 187.56 212.46 300.32 146.93"/>
+                <polygon class="b" points="187.56 212.46 187.19 342.89 73.68 277.35 74.05 146.93 187.56 212.46"/>
+            </g>
+        </g>
+    </g>
+</svg>

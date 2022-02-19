@@ -1,22 +1,27 @@
 <?php
 
-/**
- * PHPMailer POP-Before-SMTP Authentication Class.
- * PHP Version 5.5.
+/*
+ * MIT License
  *
- * @see https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+ * Copyright (c) 2022 NemeaQ
  *
- * @author    Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>
- * @author    Jim Jagielski (jimjag) <jimjag@gmail.com>
- * @author    Andy Prevost (codeworxtech) <codeworxtech@users.sourceforge.net>
- * @author    Brent R. Matzelle (original founder)
- * @copyright 2012 - 2020 Marcus Bointon
- * @copyright 2010 - 2012 Jim Jagielski
- * @copyright 2004 - 2009 Andy Prevost
- * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
- * @note      This program is distributed in the hope that it will be useful - WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 namespace content\libs\PHPMailer;
@@ -160,12 +165,12 @@ class POP3
     /**
      * Simple static wrapper for all-in-one POP before SMTP.
      *
-     * @param string   $host        The hostname to connect to
-     * @param int|bool $port        The port number to connect to
-     * @param int|bool $timeout     The timeout value
-     * @param string   $username
-     * @param string   $password
-     * @param int      $debug_level
+     * @param string $host The hostname to connect to
+     * @param int|bool $port The port number to connect to
+     * @param int|bool $timeout The timeout value
+     * @param string $username
+     * @param string $password
+     * @param int $debug_level
      *
      * @return bool
      */
@@ -176,7 +181,8 @@ class POP3
         $username = '',
         $password = '',
         $debug_level = 0
-    ) {
+    )
+    {
         $pop = new self();
 
         return $pop->authorise($host, $port, $timeout, $username, $password, $debug_level);
@@ -187,12 +193,12 @@ class POP3
      * A connect, login, disconnect sequence
      * appropriate for POP-before SMTP authorisation.
      *
-     * @param string   $host        The hostname to connect to
-     * @param int|bool $port        The port number to connect to
-     * @param int|bool $timeout     The timeout value
-     * @param string   $username
-     * @param string   $password
-     * @param int      $debug_level
+     * @param string $host The hostname to connect to
+     * @param int|bool $port The port number to connect to
+     * @param int|bool $timeout The timeout value
+     * @param string $username
+     * @param string $password
+     * @param int $debug_level
      *
      * @return bool
      */
@@ -203,13 +209,13 @@ class POP3
         if (false === $port) {
             $this->port = static::DEFAULT_PORT;
         } else {
-            $this->port = (int) $port;
+            $this->port = (int)$port;
         }
         //If no timeout value provided, use default
         if (false === $timeout) {
             $this->tval = static::DEFAULT_TIMEOUT;
         } else {
-            $this->tval = (int) $timeout;
+            $this->tval = (int)$timeout;
         }
         $this->do_debug = $debug_level;
         $this->username = $username;
@@ -235,9 +241,9 @@ class POP3
     /**
      * Connect to a POP3 server.
      *
-     * @param string   $host
+     * @param string $host
      * @param int|bool $port
-     * @param int      $tval
+     * @param int $tval
      *
      * @return bool
      */
@@ -433,10 +439,10 @@ class POP3
     /**
      * POP3 connection error handler.
      *
-     * @param int    $errno
+     * @param int $errno
      * @param string $errstr
      * @param string $errfile
-     * @param int    $errline
+     * @param int $errline
      */
     protected function catchWarning($errno, $errstr, $errfile, $errline)
     {

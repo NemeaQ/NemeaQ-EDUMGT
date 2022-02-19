@@ -60,7 +60,7 @@
     box-shadow: 0 0 0 .2em #4490E2;
 }
 
-.box-transparent{
+.box-transparent {
     padding: 27px;
     background: var(--glass-black);
     border-radius: var(--border-radius-s);

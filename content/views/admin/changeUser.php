@@ -9,21 +9,24 @@
                     </li>
                 </ul>
                 <form enctype="multipart/form-data" action="" method="post" id="tstudent_form" novalidate="">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="YXn7d5Uh8Rn0NbC6dGqVNqmkDbMPdmLvpputLlhMIElsYzTrkNBw4cocwgMHEhmT">
+                    <input type="hidden" name="csrfmiddlewaretoken"
+                           value="YXn7d5Uh8Rn0NbC6dGqVNqmkDbMPdmLvpputLlhMIElsYzTrkNBw4cocwgMHEhmT">
                     <div>
                         <fieldset class="module">
 
                             <div class="form-group row">
                                 <label for="id_surname" class="col-sm-3 col-md-2 col-form-label">Фамилия</label>
                                 <div class="col-sm-9 col-md-10 col-lg-3">
-                                    <input type="text" class="form-control" id="id_surname" placeholder="Password" maxlength="50" required="" value="Анкудинова">
+                                    <input type="text" class="form-control" id="id_surname" placeholder="Password"
+                                           maxlength="50" required="" value="Анкудинова">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="id_name" class="col-sm-3 col-md-2 col-form-label">Имя</label>
                                 <div class="col-sm-9 col-md-10 col-lg-3">
-                                    <input type="text" name="name" value="София" class="form-control" maxlength="50" required="" id="id_name">
+                                    <input type="text" name="name" value="София" class="form-control" maxlength="50"
+                                           required="" id="id_name">
                                 </div>
 
                             </div>
@@ -31,14 +34,16 @@
                             <div class="form-group row">
                                 <label for="id_midname" class="col-sm-3 col-md-2 col-form-label">Отчёство</label>
                                 <div class="col-sm-9 col-md-10 col-lg-3">
-                                    <input type="text" name="midname" value="Андреевна" class="form-control" maxlength="50" required="" id="id_midname" placeholder="Отчёство">
+                                    <input type="text" name="midname" value="Андреевна" class="form-control"
+                                           maxlength="50" required="" id="id_midname" placeholder="Отчёство">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="id_birthdate" class="col-sm-3 col-md-2 col-form-label">Дата рождения</label>
                                 <div class="col-9 col-sm-3">
-                                    <input type="text" class="form-control" id="id_birthdate" placeholder="Дата рождения" value="10.04.2008">
+                                    <input type="text" class="form-control" id="id_birthdate"
+                                           placeholder="Дата рождения" value="10.04.2008">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Сегодня</button>
                             </div>
@@ -50,7 +55,8 @@
                                 </div>
                                 <div class="form-group col-sm-9 col-md-10 col-lg-3">
                                     <label class="inline" for="id_email">Адрес электронной почты</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Email" maxlength="100" id="id_email">
+                                    <input type="email" name="email" class="form-control" placeholder="Email"
+                                           maxlength="100" id="id_email">
                                 </div>
                             </div>
 
@@ -64,7 +70,11 @@
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="id_schoolForm" class="col-form-label">Класс</label>
-                                    <select class="form-control" name="schoolForm" required="" id="id_schoolForm" data-chainfield="school" data-url="/chaining/filter/doadmin/SchoolForm/school/doadmin/Student/schoolForm" data-value="2588" data-auto_choose="true" data-empty_label="--------" class="chained-fk">
+                                    <select class="form-control" name="schoolForm" required="" id="id_schoolForm"
+                                            data-chainfield="school"
+                                            data-url="/chaining/filter/doadmin/SchoolForm/school/doadmin/Student/schoolForm"
+                                            data-value="2588" data-auto_choose="true" data-empty_label="--------"
+                                            class="chained-fk">
                                         <option value="">--------</option>
                                         <option value="6389">1А</option>
                                         <option value="6390">1Б</option>
@@ -128,21 +138,24 @@
                             <div class="form-group row">
                                 <label for="id_surname" class="col-sm-3 col-md-2 col-form-label">Портфолио</label>
                                 <div class="col-sm-9 col-md-10 col-lg-3">
-                                    <a readonly class="form-control-plaintext" href="/selfie/?sid=173634" target="_blank">Открыть</a></div>
-                                </div>
+                                    <a readonly class="form-control-plaintext" href="/selfie/?sid=173634"
+                                       target="_blank">Открыть</a></div>
                             </div>
-
-                        </fieldset>
-
-                        <div class="form-row">
-                            <button type="submit" class="btn btn-primary">Сохранить</button>
-                        </div>
-
-                        <script type="text/javascript" id="django-admin-form-add-constants" src="/static/admin/js/change_form.js"></script>
-                        <script type="text/javascript" id="django-admin-prepopulated-fields-constants" src="/static/admin/js/prepopulate_init.js" data-prepopulated-fields="[]"></script>
                     </div>
-                </form>
+
+                    </fieldset>
+
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </div>
+
+                    <script type="text/javascript" id="django-admin-form-add-constants"
+                            src="/static/admin/js/change_form.js"></script>
+                    <script type="text/javascript" id="django-admin-prepopulated-fields-constants"
+                            src="/static/admin/js/prepopulate_init.js" data-prepopulated-fields="[]"></script>
             </div>
+            </form>
         </div>
     </div>
+</div>
 </div>
