@@ -2,9 +2,9 @@
 
 namespace content\models;
 
+use content\libs\PHPMailer\PHPMailer;
 use engine\core\Model;
 use engine\libs\Db;
-use content\libs\PHPMailer;
 
 /**
  * Class Account
@@ -15,8 +15,8 @@ class Account extends Model
     /**
      * @var Db
      */
-    private $db;
-    public $error = null;
+    private Db $db;
+    public string|null $error = null;
 
     /**
      * Model constructor.
@@ -35,7 +35,7 @@ class Account extends Model
      * Входные переменные
      * @return bool
      */
-    public function validate($input, $post)
+    public function validate($input, $post): bool
     {
         $rules = [
             'email' => [
@@ -65,11 +65,11 @@ class Account extends Model
      * Проверка существования почты (на случай регистрации и замены адресса)
      * @param $email
      * Email текстом
-     * @return mixed
+     * @return array|false|null
      */
-    public function checkEmailExists($email)
+    public function checkEmailExists($email): bool|array|null
     {
-        return $this->db->queryBind('SELECT id FROM too_users WHERE email = ?', 's', [$email])->fetch_assoc();
+        return $this->db->queryBind('SELECT `id` FROM `em_users` WHERE `email` = ?', 's', [$email])->fetch_assoc();
     }
 
     public function checkRecaptcha($responce)
@@ -98,11 +98,11 @@ class Account extends Model
     /**
      * Проверка существования ТОКЕНА пользователя
      * @param $token
-     * @return mixed
+     * @return array|false|null
      */
-    public function checkTokenExists($token)
+    public function checkTokenExists($token): bool|array|null
     {
-        return $this->db->queryBind('SELECT id FROM too_users WHERE token = ?', 's',[$token])->fetch_assoc();
+        return $this->db->queryBind('SELECT `id` FROM `em_users` WHERE `token`=?', 's',[$token])->fetch_assoc();
     }
 
     /**
@@ -111,7 +111,7 @@ class Account extends Model
      */
     public function activate($token)
     {
-        $this->db->queryBind('UPDATE too_users SET status = 1, token = null WHERE token = ?', 's', [$token]);
+        $this->db->queryBind('UPDATE `em_users` SET `status`=1, `token`=null WHERE `token`=?', 's', [$token]);
     }
 
     /**
@@ -121,25 +121,25 @@ class Account extends Model
     public function register($post)
     {
         $token = $this->createToken();
-        $params = ['', $post['email'], password_hash($post['password'], PASSWORD_BCRYPT), $token];
+        $params = ['', $post['email'], password_hash($post['password'], PASSWORD_BCRYPT), $token, $post['lname'], $post['fname'], $post['mname']];
 
-        $this->db->queryBind('INSERT INTO too_users VALUES (? ,?, ?, ?, 1, null, null, null)', 'isss', $params);
+        $this->db->queryBind('INSERT INTO `em_users` VALUES (? ,?, ?, ?, 1, ?, ?, ?)', 'issssss', $params);
 
         $this->sendEmailToken($post['email'], $token);
     }
 
     /**
      * Создать токен для чела (длинна токена 30 символов)
-     * @return false|string
+     * @return string
      */
-    public function createToken()
+    public function createToken(): string
     {
         return substr(str_shuffle(str_repeat('0123456789abcdefghijklmnopqrstuvwxyz', 32)), 0, 32);
     }
 
     public function getToken($email)
     {
-        return $this->db->queryBind('SELECT token FROM too_users WHERE email=?', 's', [$email])->fetch_row()[0];
+        return $this->db->queryBind('SELECT `token` FROM `em_users` WHERE `email`=?', 's', [$email])->fetch_row()[0];
     }
 
     /**
@@ -148,15 +148,15 @@ class Account extends Model
      * @param $password
      * @return bool
      */
-    public function checkData($email, $password)
+    public function checkData($email, $password): bool
     {
-        $hash = $this->db->queryBind('SELECT password FROM too_users WHERE email=?', 's', [$email])->fetch_row();
+        $hash = $this->db->queryBind('SELECT `password` FROM `em_users` WHERE `email`=?', 's', [$email])->fetch_row();
         return password_verify($password, $hash[0]);
     }
 
-    public function checkStatus($email)
+    public function checkStatus($email): bool|array|null
     {
-        return $this->db->queryBind('SELECT status FROM too_users WHERE email=?', 's', [$email])->fetch_assoc();
+        return $this->db->queryBind('SELECT `status` FROM `em_users` WHERE `email`=?', 's', [$email])->fetch_assoc();
     }
 
     /**
@@ -166,7 +166,7 @@ class Account extends Model
      */
     public function login($email)
     {
-        $data = $this->db->queryBind('SELECT * FROM too_users WHERE email=?', 's', [$email])->fetch_assoc();
+        $data = $this->db->queryBind('SELECT * FROM `em_users` WHERE `email`=?', 's', [$email])->fetch_assoc();
         $_SESSION['account'] = $data;
     }
 
@@ -181,23 +181,23 @@ class Account extends Model
             'email' => $post['email'],
             'token' => $token,
         ];
-        $this->db->query('UPDATE too_users SET token = :token WHERE email = :email', $params);
+        $this->db->query('UPDATE `em_users` SET `token` = :token WHERE email = :email', $params);
         mail($post['email'], 'Recovery', 'Confirm: ' . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/account/reset/' . $token);
     }
 
     /**
      * Сброс пароля на токен
      * @param $token
-     * @return false|string
+     * @return string
      */
-    public function reset($token)
+    public function reset($token): string
     {
         $new_password = $this->createToken();
         $params = [
             'token' => $token,
             'password' => password_hash($new_password, PASSWORD_BCRYPT),
         ];
-        $this->db->query('UPDATE too_users SET status = 1, token = "", password = :password WHERE token = :token', $params);
+        $this->db->query('UPDATE `em_users` SET `status` = 1, `token` = "", `password` = :password WHERE `token` = :token', $params);
         return $new_password;
     }
 
@@ -252,7 +252,7 @@ class Account extends Model
         foreach ($params as $key => $val) {
             $_SESSION['account'][$key] = $val;
         }
-        $this->db->query('UPDATE too_users SET email = :email, sname = :sname, mname = :mname, fname = :fname' . $sql . ', postID = :postID, experience = :experience, skill = :skill, photo = :photo WHERE id = :id', $params);
+        $this->db->query('UPDATE `em_users` SET `email` = :email, `sname` = :sname, `mname` = :mname, `fname` = :fname' . $sql . ', postID = :postID, experience = :experience, skill = :skill, photo = :photo WHERE id = :id', $params);
     }
 
     /**

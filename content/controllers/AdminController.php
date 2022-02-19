@@ -11,14 +11,28 @@ use engine\libs\Pagination;
  */
 class AdminController extends Controller
 {
+
+    public $routes = [
+        /** Route                       => Controller Action */
+        /** Админпанель */
+        'admin' => ['admin', 'dashboard',],
+        'admin/login' => ['admin', 'login',],
+        'admin/logout' => ['admin', 'logout',],
+        'admin/users' => ['admin', 'users',],
+        'admin/players' => ['admin', 'players',],
+        'admin/reports' => ['admin', 'reports',],
+        'admin/groups' => ['admin', 'groups',],
+        'admin/player/{id:\d+}/change' => ['admin', 'changePlayer',]
+    ];
+
     /**
      * @param mixed $route
      *
      * @return void
      */
-    public function __construct($route)
-    {
+    public function __construct() {}
 
+    public function load($route) {
         $this->acl = [
             'all' => ['login',],
             'authorize' => [],

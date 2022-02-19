@@ -2,5 +2,5 @@ projectKey=EDUMGT
 serverUrl=http://localhost:9000
 serverVersion=9.2.2.50622
 dashboardUrl=http://localhost:9000/dashboard?id=EDUMGT
-ceTaskId=AX3BzWcvNt6XFAbMGw1V
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AX3BzWcvNt6XFAbMGw1V
+ceTaskId=AX3OqQMSZtsXI9ELansS
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX3OqQMSZtsXI9ELansS

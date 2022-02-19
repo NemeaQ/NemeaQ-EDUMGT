@@ -1,21 +1,16 @@
 /* Header */
 
 .header {
-    position: fixed;
+    /*position: fixed;*/
+    background-color: var(--accent);
     display: grid;
-    width: 100%;
-    padding: 12px;
-    background-color: var(--bg-gray);
+    padding: 8px;
 }
 
 @media (min-width: 800px) {
     .header {
-        padding-left: 24px;
-        padding-right: 24px;
         grid-template-columns: max-content max-content;
         justify-content: space-between;
-        -webkit-backdrop-filter: blur(8px);
-        background-color: var(--glass-dark);
     }
 }
 

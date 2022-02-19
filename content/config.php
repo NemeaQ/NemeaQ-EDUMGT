@@ -1,9 +1,10 @@
 <?php return [
     /** ADMIN-PANEL **/
-    //'admin_login' => 'admin',
-    //'admin_password' => '12345',
+    'admin_login' => 'admin',
+    'admin_password' => '12345',
     /** MYSQL **/
-    'mysql_host' => 'db.edumgt.hanriel.ru',
+    //'mysql_host' => 'db.edumgt.hanriel.ru',
+    'mysql_host' => 'localhost',
     'mysql_port' => '3306',
     'mysql_base' => 'edumgt',
     'mysql_user' => 'root',

@@ -1,9 +1,7 @@
 /* Page */
 
 .page {
-    font-family: Circular, sans-serif;
-    background-color: #222;
-    color: var(--light);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .page__body {
@@ -13,7 +11,14 @@
 
 .flex-vertical {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
     gap: 1rem;
+}
+
+@media (min-width: 800px) {
+    .flex-vertical {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }

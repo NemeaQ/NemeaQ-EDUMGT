@@ -6,8 +6,7 @@
     <title><?= $title ?>EDUMGT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#222">
-    <meta name="description"
-          content="Единая автоматизированная информационная система &quot;Управление образовательной организацие&quot;">
+    <meta name="description" content="Единая автоматизированная информационная система &quot;Управление образовательной организацией&quot;">
 
     <link rel="icon" href="/src/img/icon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/img/logo-32x32.png">
@@ -15,63 +14,62 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/src/img/logo-180x180.png.png">
     <link rel="manifest" href="/src/site.webmanifest">
 
-    <link rel="stylesheet" href="/src/css/index.min.css">
+    <link href="/src/css/index.min.css" rel="stylesheet" >
     <!-- Bootstrap CSS -->
-    <link href="../../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/5c9c921f7a.js" crossorigin="anonymous"></script>
 </head>
 <body class="page__body">
-<nav class="header leftside-menu d-flex flex-column flex-shrink-0 p-3 bg-light h-100" style="width: 230px">
-    <header class="d-flex align-items-center">
-        <a href="/" class="header__logo logo link-dark text-decoration-none ">
+<aside class="aside">
+    <header class="header">
+        <a href="/" class="header__logo logo">
             <img src="/src/img/logo.svg" class="logo__image" width="40" height="40" alt="Логотип">
-            <span>ЕАИС EDUMGT</span>
-            <span>ver 0.1</span>
+            <p class="logo__title">EDUMGT</p>
+            <p class="logo__tagline">ver 0.2</p>
         </a>
     </header>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto" id="menu__list">
-        <li class="menu__item">
-            <a class="menu__link" href="/">Главная</a>
-        </li>
-        <!--        <li class="menu__item">-->
-        <!--            <a class="menu__link" href="rules">Правила</a>-->
-        <!--        </li>-->
-        <!--        <li class="menu__item">-->
-        <!--            <a class="menu__link" href="map">Карта</a>-->
-        <!--        </li>-->
-        <!--        <li class="menu__item">-->
-        <!--            <a class="menu__link" href="wiki">Вики</a>-->
-        <!--        </li>-->
-        <!--        <li class="menu__item">-->
-        <!--            <a class="menu__link" href="donate">Донат</a>-->
-        <!--        </li>-->
-        <?php if (isset($_SESSION['account']['id'])): ?>
+    <nav class="header__menu menu">
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list">
+            <svg class="menu__icon" aria-hidden="true" width="32px" height="32px">
+                <use class="menu__icon-menu" href="/src/img/sprites.svg#menu"></use>
+                <use class="menu__icon-cross" href="/src/img/sprites.svg#cross"></use>
+            </svg>
+        </button>
+        <ul class="menu__list" id="menu__list">
             <li class="menu__item">
-                <a class="menu__link" href="profile">Профиль</a>
+                <a class="menu__link" href="/">Главная</a>
             </li>
-            <li class="menu__item">
-                <a class="menu__link" href="logout">Выход</a>
-            </li>
-        <?php else: ?>
-            <li class="menu__item">
-                <a class="menu__link" href="login">Вход</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="register">Регистрация</a>
-            </li>
-        <?php endif; ?>
-    </ul>
+            <!--        <li class="menu__item">-->
+            <!--            <a class="menu__link" href="rules">Правила</a>-->
+            <!--        </li>-->
+            <?php if (isset($_SESSION['account']['id'])): ?>
+                <li class="menu__item">
+                    <a class="menu__link" href="profile">Профиль</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="logout">Выход</a>
+                </li>
+            <?php else: ?>
+                <li class="menu__item">
+                    <a class="menu__link" href="login">Вход</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="register">Регистрация</a>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+
     <footer class="footer">
         <p class="footer__line">Copyryght️ © NemeaQ 2021.<br>Все права защищены.</p>
         <p class="footer__line"><a href="copy">Пользовательское соглашение и Согласие на обработку персональных
                 данных.</a>
         </p>
     </footer>
-</nav>
+</aside>
 <main class="main">
-    <nav class="navbar navbar-light bg-primary navbar-top navbar-expand">
+    <nav>
         <ul class="navbar-nav align-items-center d-none d-lg-block">
             <li class="nav-item">
                 <div class="search-box" data-list="{&quot;valueNames&quot;:[&quot;title&quot;]}">
@@ -155,7 +153,7 @@
                                                     <div class="notification-avatar">
                                                         <div class="avatar avatar-2xl me-3">
                                                             <img class="rounded-circle"
-                                                                 src="assets/img/icons/weather-sm.jpg" alt="">
+                                                                 src="" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="notification-body">
@@ -212,9 +210,9 @@
 
 <div class="notify top-right"></div>
 <?php if (isset($debug) && $debug): ?>
-    <script src="../../../src/js/bundle.js"></script>
+    <script src="/src/js/bundle.js"></script>
 <?php else: ?>
-    <script src="../../../src/js/bundle.min.js"></script>
+    <script src="/src/js/bundle.min.js"></script>
 <?php endif; ?>
 </body>
 </html>

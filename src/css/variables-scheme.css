@@ -3,14 +3,10 @@
 	--dark: #0b031b;
 	--dark-light: #1e113b;
 	--dark-vibrant: #250b5a;
-	--accent: #fe38ac;
+	--accent: #2972FF;
+	--accent-dark: #2565e6;
 	--accent-secondary: #1caacc;
-	--bg-light: #f1f4f6;
-	--bg-gray: #222;
-	--glass-dark: rgba(24,24,27,.5);
-	--glass-black: rgba(0,0,0,.5);
+	--bg-light: #E9E9E9;
+	--bg-dark: #222;
 	--text-accent: #250b5a;
-
-	--border-radius-s: 9px;
-	--border-radius-m: 14px;
 }

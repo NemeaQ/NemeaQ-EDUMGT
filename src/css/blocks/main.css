@@ -1,11 +1,26 @@
 .main {
-    margin-left: 230px;
+    padding-top: 48px;
     min-height: 100vh;
-    /*padding: 0 30px;*/
+}
+
+@media (min-width: 800px) {
+    .main {
+        padding-top: 0;
+        margin-left: 220px;
+    }
+
 }
 
 .main nav {
-    padding: 0 30px;
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .main nav {
+        display: flex;
+        background-color: var(--accent);
+        padding: 0 30px;
+    }
 }
 
 .main section {

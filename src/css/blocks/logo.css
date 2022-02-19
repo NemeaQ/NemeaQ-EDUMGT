@@ -4,12 +4,14 @@
     display: grid;
     grid-template-columns: max-content 1fr;
     column-gap: 8px;
-    line-height: 1.4;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
 }
 
 .logo__image {
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
 }
 
 @media (min-width: 800px) {
@@ -23,7 +25,8 @@
 .logo__title {
     margin: 0;
     letter-spacing: -0.03em;
-    font-family: CircularBold, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: 20px;
 }
 

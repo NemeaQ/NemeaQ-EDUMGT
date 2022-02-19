@@ -10,13 +10,24 @@ use engine\core\Controller;
  */
 class AccountController extends Controller
 {
+    public $routes = [
+        /** Route                       => Controller Action */
+        /** Account */
+        'login' => ['account', 'login',],
+        'profile' => ['account', 'profile'],
+        'logout' => ['account', 'logout',],
+        'register' => ['account', 'register',],
+        'account/confirm/{token:.*}' => ['account', 'confirm',],
+        'settings' => ['account', 'settings',]
+    ];
     /**
      * @param mixed $route
      *
      * @return void
      */
-    public function __construct($route)
-    {
+    public function __construct() {}
+
+    public function load($route) {
         $this->acl = [
             'all' => [],
             'authorize' => ['profile', 'logout', 'settings',],
@@ -34,8 +45,8 @@ class AccountController extends Controller
         if (!empty($_POST)) {
             if (!$this->model->validate(['email', 'password'], $_POST)) {
                 $this->view->message('error', $this->model->error);
-            } elseif (!$this->model->checkRecaptcha($_POST['g-recaptcha-response'])) {
-                $this->view->message('error', 'Подтвердите что вы не робот');
+//            } elseif (!$this->model->checkRecaptcha($_POST['g-recaptcha-response'])) {
+//                $this->view->message('error', 'Подтвердите что вы не робот');
             } elseif ($this->model->checkEmailExists($_POST['email'])) {
                 $this->view->message('error', 'Этот E-mail уже используется');
             } elseif ($_POST["password"] != $_POST["password2"]) {
