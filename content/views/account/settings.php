@@ -1,24 +1,20 @@
 <div class="loginPage mx-auto"><h1 class="mb-4">Настройки</h1>
     <form action="/profile" method="post">
-
         <div class="form-group">
             <label for="sname">Фамилия</label>
             <input type="text" class="form-control" id="sname" name="sname"
                    value="<?php echo $_SESSION['account']['sname']; ?>" required>
         </div>
-
         <div class="form-group">
             <label for="fname">Имя</label>
             <input type="text" class="form-control" id="fname" name="fname"
                    value="<?php echo $_SESSION['account']['fname']; ?>" required>
         </div>
-
         <div class="form-group">
             <label for="mname">Отчество</label>
             <input type="text" class="form-control" id="mname" name="mname"
                    value="<?php echo $_SESSION['account']['mname']; ?>" required>
         </div>
-
         <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" class="form-control" id="email" name="email"
@@ -70,5 +66,4 @@
     h1 {
         color: #797CD5;
     }
-
 </style>

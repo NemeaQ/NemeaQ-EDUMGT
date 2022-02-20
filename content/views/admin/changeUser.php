@@ -13,7 +13,6 @@
                            value="YXn7d5Uh8Rn0NbC6dGqVNqmkDbMPdmLvpputLlhMIElsYzTrkNBw4cocwgMHEhmT">
                     <div>
                         <fieldset class="module">
-
                             <div class="form-group row">
                                 <label for="id_surname" class="col-sm-3 col-md-2 col-form-label">Фамилия</label>
                                 <div class="col-sm-9 col-md-10 col-lg-3">
@@ -139,16 +138,14 @@
                                 <label for="id_surname" class="col-sm-3 col-md-2 col-form-label">Портфолио</label>
                                 <div class="col-sm-9 col-md-10 col-lg-3">
                                     <a readonly class="form-control-plaintext" href="/selfie/?sid=173634"
-                                       target="_blank">Открыть</a></div>
+                                       target="_blank">Открыть</a>
+                                </div>
                             </div>
                     </div>
-
                     </fieldset>
-
                     <div class="form-row">
                         <button type="submit" class="btn btn-primary">Сохранить</button>
                     </div>
-
                     <script type="text/javascript" id="django-admin-form-add-constants"
                             src="/static/admin/js/change_form.js"></script>
                     <script type="text/javascript" id="django-admin-prepopulated-fields-constants"

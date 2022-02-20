@@ -13,9 +13,7 @@
                 </div>
                 <?php foreach ($object as $j => $class): ?>
                     <div class="objectRow">
-                        <span class="objectColHead"><?= $class[1] ?> <sub><input type="text"
-                                                                                 name="<?= $i . "_" . $class[0] . "_0" ?>"
-                                                                                 value="<?= $class[2] ?>"> чел</sub></span>
+                        <span class="objectColHead"><?= $class[1] ?> <sub><input type="text" name="<?= $i . "_" . $class[0] . "_0" ?>" value="<?= $class[2] ?>"> чел</sub></span>
                         <p><input type="number" name="<?= $i . "_" . $class[0] . "_1" ?>" value="<?= $class[3] ?>"></p>
                         <p><input type="number" name="<?= $i . "_" . $class[0] . "_2" ?>" value="<?= $class[4] ?>"></p>
                         <p>0 % / 100%</p>
