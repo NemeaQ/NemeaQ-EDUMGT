@@ -26,21 +26,21 @@
 
 .btn {
     display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
-    color: #212529;
     text-decoration: none;
     vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
     cursor: pointer;
+    transition: 0.15s ease-in-out;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .5rem 1rem;
-    font-size: 12px;
-    border-radius: 1.5rem;
-    transition: .15s ease-in-out;
 }
 
 .btn__group > .btn {
@@ -52,32 +52,32 @@
     margin-bottom: -4px;
 }
 
-/* Colored buttons*/
+/* Colored buttons */
 
 .btn-white {
     color: #555555;
-    fill: #555555;
     background-color: #ffffff;
+    fill: #555555;
 }
 
 .btn-white:hover {
-    color: #fff;
-    fill: #fff;
+    color: #ffffff;
     background-color: transparent;
     border-color: #7d3c99;
+    fill: #ffffff;
 }
 
 
 .btn-accent {
-    color: #fff;
-    fill: #fff;
+    color: #ffffff;
     background-color: var(--accent);
+    fill: #ffffff;
 }
 
 .btn-accent:hover {
-    color: #000;
-    fill: #000;
+    color: #000000;
     background-color: transparent;
     border-color: var(--accent-dark);
+    fill: #000000;
 }
 

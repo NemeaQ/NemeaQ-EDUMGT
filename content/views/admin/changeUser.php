@@ -153,8 +153,8 @@
                             src="/static/admin/js/change_form.js"></script>
                     <script type="text/javascript" id="django-admin-prepopulated-fields-constants"
                             src="/static/admin/js/prepopulate_init.js" data-prepopulated-fields="[]"></script>
+                </form>
             </div>
-            </form>
         </div>
     </div>
 </div>
