@@ -140,8 +140,8 @@
                             </div>
                         </div>
                         <div
-                                class="scrollbar-overlay os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"
-                                style="max-height:19rem">
+                            class="scrollbar-overlay os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"
+                            style="max-height:19rem">
                             <div class="os-resize-observer-host observed">
                                 <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
                             </div>
@@ -151,7 +151,7 @@
                             <div class="os-content-glue" style="margin: 0px;"></div>
                             <div class="os-padding">
                                 <div
-                                        class="os-viewport os-viewport-native-scrollbars-invisible os-viewport-native-scrollbars-overlaid">
+                                    class="os-viewport os-viewport-native-scrollbars-invisible os-viewport-native-scrollbars-overlaid">
                                     <div class="os-content" style="padding: 0px; height: 100%; width: 100%;">
                                         <div class="list-group list-group-flush fw-normal fs--1">
                                             <div class="list-group-title border-bottom">NEW</div>
@@ -176,8 +176,7 @@
                                                 <a class="notification notification-flush" href="#!">
                                                     <div class="notification-avatar">
                                                         <div class="avatar avatar-2xl me-3">
-                                                            <img class="rounded-circle"
-                                                                 src="" alt="">
+                                                            <img class="rounded-circle" src="" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="notification-body">
@@ -193,13 +192,13 @@
                                 </div>
                             </div>
                             <div
-                                    class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+                                class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
                                 <div class="os-scrollbar-track os-scrollbar-track-off">
                                     <div class="os-scrollbar-handle" style="transform: translate(0px, 0px);"></div>
                                 </div>
                             </div>
                             <div
-                                    class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable os-scrollbar-auto-hidden">
+                                class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable os-scrollbar-auto-hidden">
                                 <div class="os-scrollbar-track os-scrollbar-track-off">
                                     <div class="os-scrollbar-handle" style="transform: translate(0px, 0px);"></div>
                                 </div>
@@ -215,7 +214,7 @@
             <li class="nav-item dropdown"><a class="nav-link pe-0" id="navbarDropdownUser" href="#" role="button"
                                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-xl">
-                        <img border="2px" width="32px" height="32px" class="rounded-circle"
+                        <img width="32px" height="32px" class="rounded-circle"
                              src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
                              alt="">
                     </div>

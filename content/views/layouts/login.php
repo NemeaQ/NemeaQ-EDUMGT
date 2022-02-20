@@ -113,7 +113,6 @@ global $debug; ?>
                         <div
                             class="scrollbar-overlay os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"
                             style="max-height:19rem">
-
                             <div
                                 class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable os-scrollbar-auto-hidden">
                                 <div class="os-scrollbar-track os-scrollbar-track-off">
@@ -131,7 +130,7 @@ global $debug; ?>
             <li class="nav-item dropdown"><a class="nav-link pe-0" id="navbarDropdownUser" href="#" role="button"
                                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-xl">
-                        <img border="2px" width="32px" height="32px" class="rounded-circle"
+                        <img width="32px" height="32px" class="rounded-circle"
                              src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
                              alt="">
                     </div>
