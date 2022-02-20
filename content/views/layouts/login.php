@@ -33,22 +33,22 @@ global $debug; ?>
     <meta name="description"
           content="Единая автоматизированная информационная система &quot;Управление образовательной организацией&quot;">
 
-    <link rel="icon" href="/src/img/icon.svg" sizes="any" type="image/svg+xml">
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/img/logo-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/img/logo-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/img/logo-180x180.png.png">
+    <link rel="icon" href="/src/images/icon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/logo-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/logo-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/logo-180x180.png.png">
     <link rel="manifest" href="/src/site.webmanifest">
 
-    <link href="/src/css/index.min.css" rel="stylesheet">
+    <link href="/src/styles/styles.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/styles/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c9c921f7a.js" crossorigin="anonymous"></script>
 </head>
 <body class="page__body">
 <aside class="aside">
     <header class="header">
         <a href="/" class="header__logo logo">
-            <img src="/src/img/logo.svg" class="logo__image" width="40" height="40" alt="Логотип">
+            <img src="/src/images/logo.svg" class="logo__image" width="40" height="40" alt="Логотип">
             <p class="logo__title">EDUMGT</p>
             <p class="logo__tagline">ver 0.2</p>
         </a>
@@ -151,6 +151,6 @@ global $debug; ?>
     </nav>
     <div class="notify top-right"></div>
 </main>
-<script src="/src/js/bundle.min.js"></script>
+<script src="/src/scripts/bundle.min.js"></script>
 </body>
 </html>

@@ -22,22 +22,39 @@
  * SOFTWARE.
  */
 
-/* Footer */
-
-.footer {
-    display: none;
+.form__box {
+    align-items: center;
+    max-width: 480px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
-@media (min-width: 800px) {
-    .footer {
-        display: grid;
-        width: 100%;
-        padding: 8px;
-    }
+.form__title {
+    margin-top: 0;
+    text-align: center;
 }
 
-.footer__line {
-    margin: 0;
-    font-size: 0.75rem;
-    line-height: 1rem;
+.form__control {
+    display: block;
+    width: 100%;
+    padding: 0.38rem 0.75rem;
+    color: #212529;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 1.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
+
+.form__control:disabled, .form__control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+

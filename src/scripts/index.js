@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-let lib_chartjs = require('chart.js');
-let lib_bs = require('bootstrap/dist/js/bootstrap.min');
+const {Chart} = require('chart.js');
+require('bootstrap/dist/js/bootstrap.min');
 
 let cardDate = document.getElementById('cardDate');
 if (cardDate) {
@@ -42,13 +42,13 @@ if (cardDate) {
         socketOutput.innerHTML += event.data;
     };
 
-    let btn_sendStart = document.getElementById('btn_sendStart');
-    btn_sendStart.addEventListener('click', () => {
+    let btnSendStart = document.getElementById('btnSendStart');
+    btnSendStart.addEventListener('click', () => {
         exampleSocket.send('start ' + cardDate.value + ' ' + cardEnable.checked);
     });
 
     const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
+    new Chart(ctx, {
         type: 'line',
         data: {
             labels: ['1 дек', '2 дек', '3 дек',
@@ -118,7 +118,7 @@ if (form) {
 
 function copyText(text = 'obsidianorder.ru') {
     if (text) {
-        navigator.clipboard.writeText(ip)
+        navigator.clipboard.writeText(text)
             .then(() => notify('Текст скопирован!'))
             .catch(() => notify('Что-то пошло не так', 'error'));
     }

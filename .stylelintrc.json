@@ -2,6 +2,10 @@
   "plugins": [
     "stylelint-order"
   ],
+  "ignoreFiles": [
+    "src/**/milligram*.css",
+    "src/**/bootstrap*.css"
+  ],
   "rules": {
     "color-no-invalid-hex": true,
     "font-family-no-duplicate-names": true,
