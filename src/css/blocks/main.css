@@ -23,16 +23,15 @@
  */
 
 .main {
-    padding-top: 48px;
     min-height: 100vh;
+    padding-top: 48px;
 }
 
 @media (min-width: 800px) {
     .main {
-        padding-top: 0;
         margin-left: 220px;
+        padding-top: 0;
     }
-
 }
 
 .main nav {
@@ -42,8 +41,8 @@
 @media (min-width: 800px) {
     .main nav {
         display: flex;
-        background-color: var(--accent);
         padding: 0 30px;
+        background-color: var(--accent);
     }
 }
 

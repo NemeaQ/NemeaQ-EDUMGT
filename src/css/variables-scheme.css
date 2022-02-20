@@ -23,14 +23,14 @@
  */
 
 :root, html, body {
-    --light: #FAFAFA;
+    --light: #fafafa;
     --dark: #0b031b;
     --dark-light: #1e113b;
     --dark-vibrant: #250b5a;
-    --accent: #2972FF;
+    --accent: #2972ff;
     --accent-dark: #2565e6;
     --accent-secondary: #1caacc;
-    --bg-light: #E9E9E9;
-    --bg-dark: #04204A;
+    --bg-light: #e9e9e9;
+    --bg-dark: #04204a;
     --text-accent: #250b5a;
 }

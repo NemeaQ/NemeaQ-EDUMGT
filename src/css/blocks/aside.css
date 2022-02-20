@@ -28,17 +28,17 @@
     position: fixed;
     display: grid;
     width: 100%;
+    color: #ffffff;
     background-color: var(--bg-light);
-    color: #fff;
 }
 
 @media (min-width: 800px) {
     .aside {
-        width: 220px;
-        height: 100%;
-        /*grid-template-columns: max-content max-content;*/
+        /* grid-template-columns: max-content max-content; */
         grid-template-rows: min-content 1fr min-content;
         justify-content: space-between;
+        width: 220px;
+        height: 100%;
         background-color: var(--bg-dark);
     }
 }

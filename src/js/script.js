@@ -26,8 +26,8 @@ let lib_chartjs = require('chart.js');
 let lib_bs = require('bootstrap/dist/js/bootstrap.min');
 
 let cardDate = document.getElementById('cardDate');
-if (!!cardDate) {
-    let exampleSocket = new WebSocket("ws://edumgt.hanriel.ru:7777");
+if (cardDate) {
+    let exampleSocket = new WebSocket('ws://edumgt.hanriel.ru:7777');
     let socketOutput = document.getElementById('socketOutput');
     let cardEnable = document.getElementById('cardEnable');
 
@@ -38,13 +38,13 @@ if (!!cardDate) {
     // exampleSocket.send("checkSession");
     // };
 
-    exampleSocket.onmessage = function (event) {
+    exampleSocket.onmessage = function(event) {
         socketOutput.innerHTML += event.data;
     };
 
     let btn_sendStart = document.getElementById('btn_sendStart');
     btn_sendStart.addEventListener('click', () => {
-        exampleSocket.send("start " + cardDate.value + " " + cardEnable.checked);
+        exampleSocket.send('start ' + cardDate.value + ' ' + cardEnable.checked);
     });
 
     const ctx = document.getElementById('myChart').getContext('2d');
@@ -54,16 +54,16 @@ if (!!cardDate) {
             labels: ['1 дек', '2 дек', '3 дек',
                 '6 дек', '7 дек', '8 дек', '9 дек', '10 дек',
                 '13 дек', '14 дек', '15 дек', '16 дек', '17 дек',
-                '20 дек', '21 дек', '22 дек'
+                '20 дек', '21 дек', '22 дек',
             ],
             datasets: [{
                 label: 'План',
                 data: [827, 784, 742, 775, 789, 821, 836, 822, 893, 1237, 1238, 944, 936, 1239, 994, 1239],
                 borderColor: 'rgb(54, 162, 235)',
-                tension: 0.4
-            }]
+                tension: 0.4,
+            }],
         },
-        options: {scales: {y: {max: 1246}}}
+        options: {scales: {y: {max: 1246}}},
     });
 }
 
@@ -73,11 +73,11 @@ const form = document.querySelector('#ajax_form');
 const notificator = document.querySelector('.notify');
 const ipCopyBtn = document.querySelector('#ipCopyBtn');
 
-if (!!ipCopyBtn) {
+if (ipCopyBtn) {
     ipCopyBtn.addEventListener('click', () => copyText());
 }
 
-if (!!menuButton) {
+if (menuButton) {
     menuButton.addEventListener('click', () => {
         let expanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !expanded);
@@ -86,7 +86,7 @@ if (!!menuButton) {
     });
 }
 
-if (!!form) {
+if (form) {
     form.addEventListener('submit', (event) => {
         if (form.id === 'no_ajax') {
             return;
@@ -96,11 +96,11 @@ if (!!form) {
         let request = new XMLHttpRequest();
         request.open(form.method, form.action, true);
 
-        request.onload = function () {
+        request.onload = function() {
             if (this.status >= 200 && this.status < 400) {
                 let data = JSON.parse(this.response);
                 if (data.url) {
-                    window.location.href = "/" + data.url;
+                    window.location.href = '/' + data.url;
                 } else if (data.reload) {
                     window.location.reload();
                 } else {
@@ -120,16 +120,16 @@ function copyText(text = 'obsidianorder.ru') {
     if (text) {
         navigator.clipboard.writeText(ip)
             .then(() => notify('Текст скопирован!'))
-            .catch(() => notify('Что-то пошло не так', 'error'))
+            .catch(() => notify('Что-то пошло не так', 'error'));
     }
 }
 
 function notify(text, type = 'notice') {
     if (text) {
         notificator.innerHTML = text;
-        notificator.setAttribute("data-notification-status", type);
+        notificator.setAttribute('data-notification-status', type);
         notificator.classList.add('do-show');
-        setTimeout(function () {
+        setTimeout(function() {
             notificator.classList.remove('do-show');
         }, 4000);
     }
