@@ -9,17 +9,17 @@ insert_final_newline     = true
 charset                  = utf-8
 max_line_length          = off
 
+[Makefile]
+indent_style = tab
+
 [*.{json,md,yml}]
 indent_size = 2
 
-[token.txt]
-insert_final_newline = false
-
 # Ignore paths
-[{/vendor/**, composer.phar}]
-charset                  = unset
-end_of_line              = unset
-insert_final_newline     = unset
-trim_trailing_whitespace = unset
+[{/vendor/**,*.phar,token.txt}]
 indent_style             = unset
 indent_size              = unset
+end_of_line              = unset
+trim_trailing_whitespace = unset
+insert_final_newline     = unset
+charset                  = unset
