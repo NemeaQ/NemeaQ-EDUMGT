@@ -22,53 +22,22 @@
  * SOFTWARE.
  */
 
+/* Footer */
 
-.check {
-    padding-left: 1.4em;
+.footer {
+    display: none;
 }
 
-.check__input {
-    position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+@media (min-width: 800px) {
+    .footer {
+        display: grid;
+        width: 100%;
+        padding: 8px;
+    }
 }
 
-.check__input:focus-visible {
-    box-shadow: none;
-}
-
-.check__box {
-    position: absolute;
-    width: 0.8em;
-    height: 0.8em;
-    margin-top: 0.2em;
-    margin-left: -1.2em;
-    background-color: white;
-    border-radius: 0.4em;
-    box-shadow: 0 0 0 0.1em #7ed321;
-}
-
-/* Checked */
-
-.check__input:checked + .check__box {
-    background-color: #7ed321;
-    background-image: url('/src/img/icons/check.svg');
-}
-
-/* Focused */
-
-.check__input:focus + .check__box {
-    box-shadow: 0 0 0 0.1em #7ed321,
-    0 0 0 0.2em #4490e2;
-}
-
-/* Focused */
-
-.check__input:disabled + .check__box {
-    box-shadow: 0 0 0 0.1em #9b9b9b;
-}
-
-.check__input:checked:disabled + .check__box {
-    background-color: #9b9b9b;
+.footer__line {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1;
 }

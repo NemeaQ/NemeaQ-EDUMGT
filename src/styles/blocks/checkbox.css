@@ -22,39 +22,52 @@
  * SOFTWARE.
  */
 
-.form__box {
-    align-items: center;
-    max-width: 480px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 10px;
+
+.check {
+    padding-left: 1.4em;
 }
 
-.form__title {
-    margin-top: 0;
-    text-align: center;
-}
-
-.form__control {
-    display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    color: #212529;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5;
-    background-color: #ffffff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 1.5rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+.check__input {
+    position: absolute;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
 
-.form__control:disabled, .form__control[readonly] {
-    background-color: #e9ecef;
-    opacity: 1;
+.check__input:focus-visible {
+    box-shadow: none;
 }
 
+.check__box {
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    margin-top: 0.2em;
+    margin-left: -1.2em;
+    background-color: white;
+    border-radius: 0.4em;
+    box-shadow: 0 0 0 0.1em #7ed321;
+}
+
+/* Checked */
+
+.check__input:checked + .check__box {
+    background-color: #7ed321;
+    background-image: url('/src/images/icons/check.svg');
+}
+
+/* Focused */
+
+.check__input:focus + .check__box {
+    box-shadow: 0 0 0 0.1em #7ed321, 0 0 0 0.2em #4490e2;
+}
+
+/* Focused */
+
+.check__input:disabled + .check__box {
+    box-shadow: 0 0 0 0.1em #9b9b9b;
+}
+
+.check__input:checked:disabled + .check__box {
+    background-color: #9b9b9b;
+}

@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title><?php echo $title; ?> | Админпанель</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/src/css/admin.css" rel="stylesheet">
+    <link href="/src/styles/admin.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <?php if ($this->route['action'] != 'login'): ?>
     <header class="header">
         <a href="/admin" class="header__logo logo">
-            <img src="/src/img/logo-admin.svg" class="logo__image" width="44" height="44" alt="Логотип">
+            <img src="/src/images/logo-admin.svg" class="logo__image" width="44" height="44" alt="Логотип">
             <p class="logo__title">Админпанель</p>
             <p class="logo__tagline"><?php echo $title; ?></p>
         </a>
@@ -33,6 +33,6 @@
         </small>
     </footer>
 <?php endif; ?>
-<script src="/src/js/script.js"></script>
+<script src="/src/scriptsripts"></script>
 </body>
 </html>
