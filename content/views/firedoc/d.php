@@ -75,7 +75,7 @@
                     xhr.open('GET', '/fd/sub/' + id);
                     xhr.send();
 
-                    xhr.onload = function () {
+                    xhr.onload = function() {
                         if (xhr.status == 200) app.$data.rows[id].subRows = JSON.parse(xhr.response);
                     };
 

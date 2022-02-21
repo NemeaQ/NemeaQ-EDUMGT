@@ -1,27 +1,5 @@
 <a class="btn btn-primary" href="/dist" role="button"><< Назад</a>
 
-<!--<div class="card text-center mt-3">-->
-<!--    <h5 class="card-header">Горячая линия с администрацией</h5>-->
-<!--    <div class="card-body">-->
-<!--        <h5 class="card-title">Мы открываем для Вас горячую линию общения с администрацией ОУ по вопросам дистанционного-->
-<!--            обучения.<br>-->
-<!--            Все вопросы и предложения Вы сможете обсудить с администрацией в онлайн режиме на платформе ZOOM каждый день-->
-<!--            (с 6 по 10 апреля) в 16:00 – 16:30.</h5>-->
-<!--        <p class="card-text">Время: 9 апр 2020 16:00<br>Идентификатор конференции: 195 053 060<br>Пароль: 010253</p>-->
-<!--        <a href="https://zoom.us/j/195053060?pwd=NFNhRlZJL25kTklJTm9xT3c1VW1MZz09" class="btn btn-primary">Подключиться к конференции Zoom</a>-->
-<!--    </div>-->
-<!--    <div class="card-footer text-muted">-->
-<!--        <a href="http://school33-perm.ru/images/news/0420/040420/Zoom.pdf">Инструкция по настройке ZOOM</a>-->
-<!--    </div>-->
-<!--</div>-->
-<!--<div class="card text-center mt-3">-->
-<!--    <h5 class="card-header">Связь с начальником отдела образования</h5>-->
-<!--    <div class="card-body">-->
-<!--        <h5 class="card-title">Уважаемые родители!<br>-->
-<!--            Вы можете обратиться к начальнику отдела образования Щелконоговой Татьяне Васильевне по номеру 89222404484. по любым вопросам!!!</h5>-->
-<!--    </div>-->
-<!--</div>-->
-
 <div class="card mt-3">
     <div class="card-header">Памятка для родителей</div>
     <div class="card-body">
@@ -54,10 +32,10 @@
 <ul class="list-group mt-3">
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <a target="_blank"
-           href="http://kungur-school12.ru/wp-content/uploads/2020/03/Pr_SED-26-01-06-257_ot_24_03_2020_Ob_organizatsii_obrazovatelnogo_protsessa_s_primeneniem_elektronnogo_obuchenia_i_distantsionny.pdf">Приказ
-            Министерства образования и науки ПК от 24.03.20 №СЭД-26-01-06-257<br>
-            Об организации образовательного процесса с применением электронного обучения и дистанционных образовательных
-            технологий на территории Пермского края в условиях распространения новой коронавирусной инфекции
+            href="http://kungur-school12.ru/wp-content/uploads/2020/03/Pr_SED-26-01-06-257_ot_24_03_2020_Ob_organizatsii_obrazovatelnogo_protsessa_s_primeneniem_elektronnogo_obuchenia_i_distantsionny.pdf">Приказ
+            Министерства образования и науки ПК от 24.03.20 №СЭД-26-01-06-257<br>Об организации образовательного
+            процесса с применением электронного обучения и дистанционных образовательных технологий на территории
+            Пермского края в условиях распространения новой коронавирусной инфекции
         </a>
         <span class="badge badge-primary badge-pill">pdf</span>
     </li>

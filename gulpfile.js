@@ -75,11 +75,9 @@ function images() {
 }
 
 function scripts(cb) {
-    return pipeline(
-        gulp.src(`${SRC.js}*.js`),
-        uglify(),
-        gulp.dest('dist')
-    );
+    return gulp.src(`${SRC.js}*.js`)
+        .uglify()
+        .gulp.dest('dist');
 }
 
 function styles() {

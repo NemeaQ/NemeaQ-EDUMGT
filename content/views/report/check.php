@@ -35,13 +35,13 @@
 
 <?php if ($vars["status"]["arch"]): ?>
     <button class="btn btn-blue" form="report" type="submit"
-            onclick="javascript: form.action='/report/unArch/<?= $vars["id"] ?>';">Отклонить и убрать из архива
+        onclick="javascript: form.action='/report/unArch/<?= $vars["id"] ?>';">Отклонить и убрать из архива
     </button>
 <?php else: ?>
     <button class="btn btn-green" form="report" type="submit"
-            onclick="javascript: form.action='/report/denied/<?= $vars["id"] ?>';">Отклонить
+        onclick="javascript: form.action='/report/denied/<?= $vars["id"] ?>';">Отклонить
     </button>
     <button class="btn btn-blue" form="report" type="submit"
-            onclick="javascript: form.action='/report/access/<?= $vars["id"] ?>';">Принять
+        onclick="javascript: form.action='/report/access/<?= $vars["id"] ?>';">Принять
     </button>
 <?php endif; ?>

@@ -24,12 +24,12 @@
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                   placeholder="Введите email" required>
+                placeholder="Введите email" required>
         </div>
         <div class="form-group">
             <label for="phone">Телефон</label>
             <input type="text" class="form-control" id="phone" name="phone" aria-describedby="emailHelp"
-                   placeholder="+7 (___) ___-__-__" required>
+                placeholder="+7 (___) ___-__-__" required>
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="personal" name="personal" required>
@@ -49,7 +49,7 @@
             if (!form.personal.checked)
                 errors.push('Необходимо согласие на обработку перс. данных!');
             if (errors.length === 0) return true;
-            $('.modal-body').text(errors.join("\n"));
+            $('.modal-body').text(errors.join('\n'));
             $('#info').modal('toggle');
             return false;
 

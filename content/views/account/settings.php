@@ -1,28 +1,24 @@
 <div class="loginPage mx-auto"><h1 class="mb-4">Настройки</h1>
     <form action="/profile" method="post">
-
         <div class="form-group">
             <label for="sname">Фамилия</label>
             <input type="text" class="form-control" id="sname" name="sname"
-                   value="<?php echo $_SESSION['account']['sname']; ?>" required>
+                value="<?php echo $_SESSION['account']['sname']; ?>" required>
         </div>
-
         <div class="form-group">
             <label for="fname">Имя</label>
             <input type="text" class="form-control" id="fname" name="fname"
-                   value="<?php echo $_SESSION['account']['fname']; ?>" required>
+                value="<?php echo $_SESSION['account']['fname']; ?>" required>
         </div>
-
         <div class="form-group">
             <label for="mname">Отчество</label>
             <input type="text" class="form-control" id="mname" name="mname"
-                   value="<?php echo $_SESSION['account']['mname']; ?>" required>
+                value="<?php echo $_SESSION['account']['mname']; ?>" required>
         </div>
-
         <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" class="form-control" id="email" name="email"
-                   value="<?php echo $_SESSION['account']['email']; ?>" required>
+                value="<?php echo $_SESSION['account']['email']; ?>" required>
         </div>
 
         <div class="form-group">
@@ -33,7 +29,7 @@
         <div class="form-group">
             <label for="experience">Стаж</label>
             <input type="text" class="form-control" id="experience"
-                   value="<?php echo $_SESSION['account']['teachers']['exp']; ?>" required name="experience">
+                value="<?php echo $_SESSION['account']['teachers']['exp']; ?>" required name="experience">
         </div>
 
         <div class="form-group">
@@ -70,5 +66,4 @@
     h1 {
         color: #797CD5;
     }
-
 </style>

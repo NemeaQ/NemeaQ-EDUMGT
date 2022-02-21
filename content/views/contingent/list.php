@@ -55,7 +55,7 @@
 
                 }
             }
-        })
+        });
     </script>
 
     <div id="changelist-filter">
@@ -73,7 +73,7 @@
                 <span <?= isset($_GET['class']) ? '' : 'class="selected"' ?>><a href="?" title="Все">Все</a></span>
                 <?php foreach ($classList as $class): ?>
                     <span <?= isset($_GET['class']) ? ($class['id'] == $_GET['class'] ? 'class="selected"' : '') : '' ?>><a
-                                href="?class=<?= $class['id'] ?>"><?= $class['name'] ?></a></span>
+                            href="?class=<?= $class['id'] ?>"><?= $class['name'] ?></a></span>
                 <?php endforeach; ?>
             </div>
         </section>
