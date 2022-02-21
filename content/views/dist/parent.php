@@ -32,7 +32,7 @@
 <ul class="list-group mt-3">
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <a target="_blank"
-           href="http://kungur-school12.ru/wp-content/uploads/2020/03/Pr_SED-26-01-06-257_ot_24_03_2020_Ob_organizatsii_obrazovatelnogo_protsessa_s_primeneniem_elektronnogo_obuchenia_i_distantsionny.pdf">Приказ
+            href="http://kungur-school12.ru/wp-content/uploads/2020/03/Pr_SED-26-01-06-257_ot_24_03_2020_Ob_organizatsii_obrazovatelnogo_protsessa_s_primeneniem_elektronnogo_obuchenia_i_distantsionny.pdf">Приказ
             Министерства образования и науки ПК от 24.03.20 №СЭД-26-01-06-257<br>Об организации образовательного
             процесса с применением электронного обучения и дистанционных образовательных технологий на территории
             Пермского края в условиях распространения новой коронавирусной инфекции

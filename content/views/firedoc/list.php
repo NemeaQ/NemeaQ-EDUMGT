@@ -1,12 +1,12 @@
 <div class="box" style="border-radius: 43px">
     <a class="btn btn-green" href="/fd/list/<?= $parent ?>" title="К родительскому каталогу"><i
-                class="fas fa-arrow-up"></i></a>
+            class="fas fa-arrow-up"></i></a>
     <input id="file" type="file" style="display: none"/>
     <button class="btn btn-green" id="upload" title="Загрузить файл"><i class="fas fa-plus-square"></i></button>
     <button class="btn btn-green" id="addDir" title="Новый католог"><i class="fas fa-folder-plus"></i></button>
     <script>
-        $("#addDir").on("click", function () {
-            var txt = prompt("Введите имя каталога:", "Новая папка");
+        $('#addDir').on('click', function() {
+            var txt = prompt('Введите имя каталога:', 'Новая папка');
             let form_data = new FormData();
             form_data.append('txt', txt);
             form_data.append('dir', <?= isset($this->route['id']) ? $this->route['id'] : '0' ?>);
@@ -18,7 +18,7 @@
                 processData: false,
                 data: form_data,
                 type: 'post',
-                success: function (result) {
+                success: function(result) {
                     $('.notify')
                         .removeClass()
                         .text(result.message)
@@ -26,7 +26,7 @@
                         .addClass('top-right notify')
                         .addClass('do-show');
                     location.reload();
-                    setTimeout(function () {
+                    setTimeout(function() {
                         $('.notify').removeClass('do-show');
                     }, 4000);
                 }
@@ -34,11 +34,11 @@
 
         });
 
-        $("#upload").on("click", function () {
-            $("#file").trigger("click");
+        $('#upload').on('click', function() {
+            $('#file').trigger('click');
         });
 
-        $("#file").change(function (e) {
+        $('#file').change(function(e) {
             let form_data = new FormData();
             form_data.append('file', e.target.files[0]);
             form_data.append('name', 'test');
@@ -51,7 +51,7 @@
                 processData: false,
                 data: form_data,
                 type: 'post',
-                success: function (result) {
+                success: function(result) {
                     $('.notify')
                         .removeClass()
                         .text(result.message)
@@ -59,7 +59,7 @@
                         .addClass('top-right notify')
                         .addClass('do-show');
                     location.reload();
-                    setTimeout(function () {
+                    setTimeout(function() {
                         $('.notify').removeClass('do-show');
                     }, 4000);
                 }
@@ -86,8 +86,8 @@
             <!--            <td>--><? //= $val['creationDate'] ?><!--</td>-->
             <td>
                 <div class="fd-author"
-                     style="background-image: url('<?php echo 'https://sch24perm.ru/fd/show/' . $val['photo']; ?>');"
-                     data-content="<?php echo $val['author'] ?>" data-placement="top" data-trigger="hover"></div>
+                    style="background-image: url('<?php echo 'https://sch24perm.ru/fd/show/' . $val['photo']; ?>');"
+                    data-content="<?php echo $val['author'] ?>" data-placement="top" data-trigger="hover"></div>
             </td>
             <td class="cm"><i class="fas fa-ellipsis-h"></i></td>
             <td>---</td>
@@ -133,8 +133,8 @@
             </td>
             <td>
                 <div class="fd-author"
-                     style="background-image: url('<?php echo 'https://sch24perm.ru/fd/show/' . $val['photo']; ?>');"
-                     data-content="<?php echo $val['author'] ?>" data-placement="top" data-trigger="hover"></div>
+                    style="background-image: url('<?php echo 'https://sch24perm.ru/fd/show/' . $val['photo']; ?>');"
+                    data-content="<?php echo $val['author'] ?>" data-placement="top" data-trigger="hover"></div>
             </td>
             <td class="cm" data="<?= $val['id'] ?>"><i class="fas fa-ellipsis-h"></i></td>
             <td><?= $val['size'] ?> bytes</td>
@@ -166,28 +166,28 @@
 
 </table>
 <script type="text/javascript">
-    $(function () {
+    $(function() {
         $.contextMenu({
             selector: '.cm',
             trigger: 'left',
-            build: function (element, e) {
+            build: function(element, e) {
                 return {
-                    callback: function (key, options) {
+                    callback: function(key, options) {
                         switch (key) {
-                            case "show":
+                            case 'show':
                                 window.location.href = '/fd/show/' + $(element).attr('data');
                                 break;
-                            case "rename":
+                            case 'rename':
 
                                 break;
-                            case "download":
+                            case 'download':
                                 window.location.href = '/fd/dw/' + $(element).attr('data');
                                 break;
-                            case "delete":
+                            case 'delete':
                                 $.ajax({
                                     url: '/fd/del/' + $(this).attr('data'),
-                                    dataType: "json",
-                                    success: function (result) {
+                                    dataType: 'json',
+                                    success: function(result) {
                                         $('.notify')
                                             .removeClass()
                                             .text(result.message)
@@ -195,7 +195,7 @@
                                             .addClass('top-right notify')
                                             .addClass('do-show');
                                         $(element).parent().remove();
-                                        setTimeout(function () {
+                                        setTimeout(function() {
                                             $('.notify').removeClass('do-show');
                                         }, 4000);
                                     },
@@ -209,20 +209,20 @@
                 };
             },
 
-            callback: function () {
+            callback: function() {
             },
             items: {
-                "show": {name: "Просмотреть", icon: "fas fa-eye"},
-                "rename": {name: "Переименовать", icon: "fas fa-edit"},
-                "download": {name: "Скачать", icon: "fas fa-cloud-download-alt"},
-                "sep1": "---------",
-                "delete": {name: "Удалить", icon: "fas fa-trash-alt icon-red"},
+                'show': {name: 'Просмотреть', icon: 'fas fa-eye'},
+                'rename': {name: 'Переименовать', icon: 'fas fa-edit'},
+                'download': {name: 'Скачать', icon: 'fas fa-cloud-download-alt'},
+                'sep1': '---------',
+                'delete': {name: 'Удалить', icon: 'fas fa-trash-alt icon-red'},
             }
         });
 
-        $('.cm').on('click', function (e) {
+        $('.cm').on('click', function(e) {
             console.log('clicked', this);
-        })
+        });
     });
 
 </script>

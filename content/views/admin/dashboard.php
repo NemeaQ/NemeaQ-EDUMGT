@@ -30,10 +30,10 @@
     <!--    </table>-->
 </div>
 <script>
-    (function () {
+    (function() {
         httpRequest = new XMLHttpRequest();
 
-        httpRequest.onload = function () {
+        httpRequest.onload = function() {
             let data = JSON.parse(this.response);
             for (const [key, value] of Object.entries(data)) {
                 let str = document.getElementById('server-' + key);

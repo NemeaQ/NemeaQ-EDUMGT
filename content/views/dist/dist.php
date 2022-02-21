@@ -25,7 +25,7 @@
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <a target="_blank"
-           href="http://perm-school24.ru/doc/%D0%9D%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/6-13%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F.xlsx">Расписание
+            href="http://perm-school24.ru/doc/%D0%9D%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82/6-13%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F.xlsx">Расписание
             занятий с 6 по 11 апреля</a>
         <span class="badge badge-primary badge-pill">xlsx</span>
     </li>
@@ -38,7 +38,7 @@
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <a target="_blank"
-           href="http://kungur-school12.ru/wp-content/uploads/2020/03/Pr_SED-26-01-06-257_ot_24_03_2020_Ob_organizatsii_obrazovatelnogo_protsessa_s_primeneniem_elektronnogo_obuchenia_i_distantsionny.pdf">Приказ
+            href="http://kungur-school12.ru/wp-content/uploads/2020/03/Pr_SED-26-01-06-257_ot_24_03_2020_Ob_organizatsii_obrazovatelnogo_protsessa_s_primeneniem_elektronnogo_obuchenia_i_distantsionny.pdf">Приказ
             Министерства образования и науки ПК от 24.03.20 №СЭД-26-01-06-257 «Об организации образовательного процесса
             с применением электронного обучения и дистанционных образовательных технологий на территории ПК в условиях
             распространения новой коронавирусной инфекции»</a>
@@ -46,7 +46,7 @@
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <a target="_blank"
-           href="http://gimnaziya3perm.ucoz.ru/2019/Novosti/Vn_SED-26-01-36-315_ot_25_03_2020_O_napravlenii_me.pdf">Письмо
+            href="http://gimnaziya3perm.ucoz.ru/2019/Novosti/Vn_SED-26-01-36-315_ot_25_03_2020_O_napravlenii_me.pdf">Письмо
             Министерства образования и науки ПК от 25.03.20 №СЭД-26-01-36-315 «О направлении методических
             рекомендаций»</a>
         <span class="badge badge-primary badge-pill">pdf</span>

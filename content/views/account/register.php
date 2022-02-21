@@ -2,14 +2,14 @@
     <form id="ajax_form" class="form__box" action="register" method="post">
         <h1 class="form__title">Регистрация</h1>
         <input class="form__control" type="email" name="email" placeholder="Элеткронная почта"
-               aria-label="Элеткронная почта" required><br>
+            aria-label="Элеткронная почта" required><br>
         <input class="form__control" type="text" name="lname" placeholder="Фамилия" aria-label="Фамилия" required><br>
         <input class="form__control" type="text" name="fname" placeholder="Имя" aria-label="Имя" required><br>
         <input class="form__control" type="text" name="mname" placeholder="Отчество" aria-label="Отчество"><br>
         <input class="form__control" type="password" name="password" placeholder="Пароль" aria-label="Пароль"
-               required><br>
+            required><br>
         <input class="form__control" type="password" name="password2" placeholder="Повторите пароль"
-               aria-label="Повтор пароля" required><br>
+            aria-label="Повтор пароля" required><br>
         <label class="check">
             <input class="check__input" type="checkbox">
             <span class="check__box"></span>Я принимаю условия <a href="/copy" target="_blank">Пользовательского

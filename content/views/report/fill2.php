@@ -13,7 +13,9 @@
                 </div>
                 <?php foreach ($object as $j => $class): ?>
                     <div class="objectRow">
-                        <span class="objectColHead"><?= $class[1] ?> <sub><input type="text" name="<?= $i . "_" . $class[0] . "_0" ?>" value="<?= $class[2] ?>"> чел</sub></span>
+                        <span class="objectColHead"><?= $class[1] ?> <sub><input type="text"
+                                    name="<?= $i . "_" . $class[0] . "_0" ?>"
+                                    value="<?= $class[2] ?>"> чел</sub></span>
                         <p><input type="number" name="<?= $i . "_" . $class[0] . "_1" ?>" value="<?= $class[3] ?>"></p>
                         <p><input type="number" name="<?= $i . "_" . $class[0] . "_2" ?>" value="<?= $class[4] ?>"></p>
                         <p>0 % / 100%</p>
@@ -83,7 +85,7 @@
 </style>
 
 <script>
-    $("input").change(function () {
+    $('input').change(function() {
         let parent = this.closest('.objectRow');
 
         let el1 = parent.childNodes[1].lastChild.firstChild.value;
@@ -93,6 +95,6 @@
         let quality = Math.round(el2 / el1 * 100);
         let progress = Math.round((el1 - el3) / el1 * 100);
 
-        parent.childNodes[7].innerHTML = quality + " % / " + progress + "%";
+        parent.childNodes[7].innerHTML = quality + ' % / ' + progress + '%';
     });
 </script>

@@ -20,16 +20,18 @@
                     <?php foreach ($vars["tasks"] as $j => $kTsk): ?>
                         <td>
                             <?php if (isset($kTsk["variants"])): ?>
-                                <label> <select name="i<?= $j ?>[]">
+                                <label>
+                                    <select name="i<?= $j ?>[]">
                                         <?PHP foreach ($kTsk["variants"] as $item): ?><?php if (isset($kTsk["value"][$i])): ?>
                                             <option <?= $item["name"] == $kTsk["value"][$i] ? " selected" : "" ?>><?= $item["name"] ?></option>
                                         <?php else: ?>
                                             <option><?= $item["name"] ?></option>
                                         <?php endif; ?><?PHP endforeach; ?>
-                                    </select> </label>
+                                    </select>
+                                </label>
                             <?php else: ?>
                                 <input type="text" name="i<?= $j ?>[]" style="width:60px"
-                                       value="<?= isset($kTsk["value"][$i]) ? $kTsk["value"][$i] : '' ?>">
+                                    value="<?= isset($kTsk["value"][$i]) ? $kTsk["value"][$i] : '' ?>">
                             <?php endif; ?>
                         </td>
                     <?php endforeach; ?>

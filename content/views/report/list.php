@@ -54,21 +54,21 @@ $objects = $db->row('SELECT * FROM sn_forms');
 
                 chart.data.datasets.push({
                     label: '% качества',
-                    backgroundColor: "rgba(255,99,132,0.2)",
-                    borderColor: "rgba(255,99,132,1)",
+                    backgroundColor: 'rgba(255,99,132,0.2)',
+                    borderColor: 'rgba(255,99,132,1)',
                     borderWidth: 1,
-                    hoverBackgroundColor: "rgba(255,99,132,0.4)",
-                    hoverBorderColor: "rgba(255,99,132,1)",
+                    hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                    hoverBorderColor: 'rgba(255,99,132,1)',
                     data: [10, 10, 10]
                 });
 
                 chart.data.datasets.push({
                     label: '% успеваемости',
-                    backgroundColor: "rgba(132,154,255,0.2)",
-                    borderColor: "rgb(136,187,255)",
+                    backgroundColor: 'rgba(132,154,255,0.2)',
+                    borderColor: 'rgb(136,187,255)',
                     borderWidth: 1,
-                    hoverBackgroundColor: "rgba(131,205,255,0.4)",
-                    hoverBorderColor: "rgb(120,209,255)",
+                    hoverBackgroundColor: 'rgba(131,205,255,0.4)',
+                    hoverBorderColor: 'rgb(120,209,255)',
                     data: [10, 10, 10]
                 });
 
